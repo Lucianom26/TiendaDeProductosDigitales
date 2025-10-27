@@ -1,0 +1,336 @@
+/*/ CSS for Biblia para Niños Website */
+/* This file contains styles for the website, including layout, colors, and responsive design.*/
+/* Reset */
+:root {
+    --primary-color: #ff5722;
+    --secondary-color: #ff9800;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --button-color: #28a745;
+    --button-hover-color: #218838;
+    --texto--adultos: font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+.highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+/* NAV */
+.navbar {
+    background: linear-gradient(to right, #ff5722, #ff9800);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--text-color);
+}
+
+/* Botón menú móvil */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to right, #ff5722, #ff9800);
+    color: white;
+    text-align: center;
+    padding: 40px 20px 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    border: 2px solid #ff9800;
+    
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.hero h1 span {
+    color: yellow;
+    font-weight: bold;    
+}
+
+.btn-comprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0;
+    padding: 12px 20px; /* menos padding horizontal */
+    background: #28a745;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+    max-width: 220px; /* limita el ancho máximo */
+    width: fit-content; /* ajusta el ancho al contenido */
+}
+
+.btn-comprar:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* EFECTO PULSE */
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* SECCIONES */
+.beneficios, .testimonios, .cta, .product-include {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.beneficio {
+    background: var(--secondary-color);
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+blockquote {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-style: italic;
+}
+.product-card {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 15px auto;
+}
+.product-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-include h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+.product-card ul {
+    list-style: none;
+    padding: 0;
+}
+.product-card li {
+    background: var(--secondary-color);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* ANIMACIONES */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+.scroll-reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* SECCIÓN CTA */
+.cta {
+   background: linear-gradient(to right, #ff5722, #ff9800);
+    color: white;
+    text-align: center;
+    padding: 30px 20px 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    border: 2px solid #ff9800;
+}
+
+/* Imagen dentro del CTA */
+.cta-image {
+    max-width: 250px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Texto destacado */
+.cta-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Bloque de precios */
+.price {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.original-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.discounted-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: var(--secondary-color);
+    padding: 5px 15px;
+    border-radius: 6px;
+}
+
+/* Botón dentro del CTA */
+.cta .btn-comprar {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #28a745;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    max-width: 220px;
+    width: fit-content;
+}
+
+.cta .btn-comprar:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Efecto pulse para destacar el botón */
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .price {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .discounted-price {
+        font-size: 1.6rem;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #ff5722;
+        position: absolute;
+        top: 60px;
+        right: 10;
+        width: 200px;
+        padding: 10px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
