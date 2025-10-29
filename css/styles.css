@@ -1,336 +1,343 @@
-/*/ CSS for Biblia para Niños Website */
-/* This file contains styles for the website, including layout, colors, and responsive design.*/
-/* Reset */
-:root {
-    --primary-color: #ff5722;
-    --secondary-color: #ff9800;
-    --text-color: #333;
-    --background-color: #f4f4f4;
-    --button-color: #28a745;
-    --button-hover-color: #218838;
-    --texto--adultos: font-family: Arial, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* GENERAL */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-}
-.highlight {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-/* NAV */
-.navbar {
-    background: linear-gradient(to right, #ff5722, #ff9800);
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    gap: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.nav-links li a {
-    color: white;
     text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(90deg, rgba(241, 237, 220, 1) 0%,
+            rgba(255, 255, 253, 1) 50%,
+            rgba(252, 246, 232, 1) 100%);
+    padding: 70px 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ff3c2a;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
     font-size: 16px;
-    transition: color 0.3s;
+    color: #111111;
+    padding: 20px;
+    display: block;
 }
 
-.nav-links li a:hover {
-    color: var(--text-color);
+.menu .navbar ul li a:hover {
+    color: #ff3c2a;
 }
 
-/* Botón menú móvil */
-.menu-toggle {
+#menu {
     display: none;
-    font-size: 24px;
+}
+
+.menu-icono {
+    width: 30px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4e4b5076;
+    padding: 20px;
+    min-width: 400px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    color: #ffffff;
+}
+
+.borrar {
+    background-color: #ff3c2a;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color:#ffffff;
+    font-weight: 800;
     cursor: pointer;
 }
 
-/* HERO */
-.hero {
-    background: linear-gradient(to right, #ff5722, #ff9800);
-    color: white;
-    text-align: center;
-    padding: 40px 20px 50px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin: 20px auto;
-    max-width: 1200px;
+.header-content{
+    flex: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    border: 2px solid #ff9800;
+}
+.header-text {
+    flex-basis: 40%;
+}
+.header-text h1 {
+    font-size: 70px;
+    color: #181818;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #4b4b4b;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.btn-1, .btn-3{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #ff3c2a;
+    border: 2px solid #ff3c2a;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+.btn-1:hover, .btn-3:hover {
+    background-color: #ff3c2a;
+    color: #ffffff;
     
 }
 
-.hero-image {
-    flex: 1;
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
+.header-img {
+    flex-basis: 50%;
+    text-align: right;
     border-radius: 10px;
 }
 
-.hero h1 span {
-    color: yellow;
-    font-weight: bold;    
+.ofertas{
+    padding: 100px 0;
 }
 
-.btn-comprar {
+h2{
+    font-size: 40px;
+    line-height: 1;
+    color:#181818;
+    margin-bottom: 10px;
+}
+
+.ofertas-content{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto 0;
-    padding: 12px 20px; /* menos padding horizontal */
-    background: #28a745;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: transform 0.3s, background 0.3s;
-    max-width: 220px; /* limita el ancho máximo */
-    width: fit-content; /* ajusta el ancho al contenido */
+    margin-bottom: 30px;
+    justify-content: space-between;
 }
 
-.btn-comprar:hover {
-    background: #218838;
-    transform: scale(1.05);
-}
-
-/* EFECTO PULSE */
-.pulse {
-    animation: pulse 1.5s infinite;
-}
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-/* SECCIONES */
-.beneficios, .testimonios, .cta, .product-include {
-    max-width: 800px;
-    margin: auto;
-    padding: 30px;
+.oferta-1 {
+    flex-basis: calc(60% - 30px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
     text-align: center;
-}
-
-.beneficio {
-    background: var(--secondary-color);
-    margin: 15px 0;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-blockquote {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 10px 0;
-    font-style: italic;
-}
-.product-card {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 5px;
-    background: #fff;
-    padding: 30px;
+    padding: 25px;
+    background-color: #f7fafa;
+    border: 2px solid #f0f0f0;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin: 15px auto;
-}
-.product-card h3 {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-}
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
 }
 
-.product-include h2 {
+.oferta-1 img {
+    width: 130px;
+    height: 170px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #181818;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.producto-txt p{
+    margin-bottom: 10px;
+}
+
+.precio {
+    color: #ff3c2a;
+    font-weight: 700;
     margin-bottom: 20px;
-    font-size: 1.5rem;
-}
-.product-card ul {
-    list-style: none;
-    padding: 0;
-}
-.product-card li {
-    background: var(--secondary-color);
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1.1rem;
 }
 
-
-
-
-/* ANIMACIONES */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-@keyframes fadeIn {
-    to { opacity: 1; }
+.btn-3 {
+    padding: 4px 20px;
 }
 
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease;
-}
-.scroll-reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* SECCIÓN CTA */
-.cta {
-   background: linear-gradient(to right, #ff5722, #ff9800);
-    color: white;
-    text-align: center;
-    padding: 30px 20px 50px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin: 20px auto;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    border: 2px solid #ff9800;
+.logan-1{
+    flex-basis: 40%;
+    background: linear-gradient(
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2)), 
+        url('/img/BANNERAVATAR.webp'); 
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 50px;
+        border-radius: 10px;
 }
 
-/* Imagen dentro del CTA */
-.cta-image {
-    max-width: 250px;
-    width: 100%;
-    border-radius: 10px;
-    margin: 20px auto;
-    display: block;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+.logan-1 h3 {
+    color: #ffffff;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
-/* Texto destacado */
-.cta-text {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-/* Bloque de precios */
-.price {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    align-items: center;
-}
-
-.original-price {
-    font-size: 1.2rem;
-    text-decoration: line-through;
-    opacity: 0.7;
-}
-
-.discounted-price {
-    font-size: 1.8rem;
-    font-weight: bold;
-    background: var(--secondary-color);
-    padding: 5px 15px;
-    border-radius: 6px;
-}
-
-/* Botón dentro del CTA */
-.cta .btn-comprar {
-    padding: 12px 25px;
+.logan-1 p {
     font-size: 18px;
-    font-weight: bold;
-    background: #28a745;
-    border-radius: 6px;
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s ease;
-    max-width: 220px;
-    width: fit-content;
+    text-transform: uppercase;
+    color:#f7f7f7;
+    margin-bottom: 20px;
 }
 
-.cta .btn-comprar:hover {
-    background: #218838;
-    transform: scale(1.05);
+.btn-2 {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.btn-2:hover {
+    background-color: #ffffff;
+    color: #ff3c2a;
 }
 
-/* Efecto pulse para destacar el botón */
-.pulse {
-    animation: pulse 1.5s infinite;
-}
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+.promocion{
+    padding: 80px 0;
+    background-color: #f7f7f7;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    .price {
-        flex-direction: column;
-        gap: 5px;
-    }
-    .discounted-price {
-        font-size: 1.6rem;
-    }
+.promocion-content{
+    display: flex;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #ff5722;
-        position: absolute;
-        top: 60px;
-        right: 10;
-        width: 200px;
-        padding: 10px;
-    }
-    .nav-links.show {
-        display: flex;
-    }
-    .menu-toggle {
-        display: block;
-    }
+.promocion-txt {
+    flex-basis: 50%;
+    
+}
+
+.promocion-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+.promocion-img img {
+    width: 250px;
+    border-radius: 10px;
+}
+.producto {
+    padding: 100px 0;
+    text-align: center;
+}
+.producto-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.blog{
+    padding: 50px 0 100px 0;
+}
+
+.blog-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-1 {
+    flex-basis: calc(33.33% - 30px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.blog-txt{
+    padding: 40px;
+}
+.btn-4 {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #181818;
+    border: 1px solid #181818;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+.footer {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.redes-sociales h3{
+    font-size: 25px;
+    color: #181818;
+    margin-bottom: 20px;
+}
+.redes-sociales a{
+    font-size: 25px;
+    color: #181818;
+    display: block;
+    margin-bottom: 10px;
+}
+.redes-sociales a:hover{
+    color: #ff3c2a;
+}
+.footer p {
+    color: #4b4b4b;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.footer p img{
+    vertical-align: middle;
+    width: 100px;
+    padding: 0;
 }
