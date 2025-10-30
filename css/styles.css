@@ -209,6 +209,7 @@ h3 {
 .precio {
     color: #ff3c2a;
     font-weight: 700;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
@@ -275,6 +276,9 @@ h3 {
 .btn-2:hover {
     background-color: #ffffff;
     color: #ff3c2a;
+}
+.btn-comprar {
+    margin-top: 15px;
 }
 
 .promocion{
