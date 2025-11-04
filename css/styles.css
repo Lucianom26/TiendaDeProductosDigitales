@@ -10,6 +10,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, rgba(224, 188, 58, 1) 0%, rgba(224, 160, 20, 1) 43%, rgba(255, 225, 0, 0.99) 100%);
 }
 
 img {
@@ -26,10 +27,8 @@ img {
     display: flex;
     align-items: center;
     min-height: 80vh;
-    background: linear-gradient(90deg, rgba(241, 237, 220, 1) 0%,
-            rgba(255, 255, 253, 1) 50%,
-            rgba(252, 246, 232, 1) 100%);
-    padding: 70px 0;
+    padding: 100px 50px 50px 50px;
+    background: linear-gradient(90deg, rgba(241, 237, 220, 1) 0%, rgba(255, 255, 253, 1) 50%, rgba(252, 246, 232, 1) 100%);
 }
 
 .menu {
@@ -40,6 +39,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -48,8 +48,14 @@ img {
     text-transform: uppercase;
     font-weight: 800;
 }
+
 .logo-img {
     width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .menu .navbar ul li {
@@ -105,7 +111,8 @@ table {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     color: #ffffff;
 }
 
@@ -113,25 +120,53 @@ th, td {
     background-color: #ff3c2a;
     border-radius: 50%;
     padding: 5px 10px;
-    color:#ffffff;
+    color: #ffffff;
     font-weight: 800;
     cursor: pointer;
 }
-
-.header-content{
-    flex: 1;
+.active {
+    color: #ff3c2a;
+    font-weight: 600;
+}
+.header-content {
     display: flex;
     align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+    background-image: url(/img/Banner-Compu-opacity.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    padding: 20px;
 }
+
+.header-img {
+    flex-basis: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
 .header-txt {
-    flex-basis: 40%;
+    flex-basis: 50%;
+    padding: 20px;
 }
+
 .header-txt h1 {
     font-size: 50px;
-    color: #181818;
+    color: #f7f7f7;
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 20px;
+}
+
+.header-txt p {
+    color: #f7f7f7;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
 p {
@@ -141,39 +176,40 @@ p {
     margin-bottom: 25px;
 }
 
-.btn-1, .btn-3{
-    display: inline-block;
+
+/* === BOTONES === */
+.btn-1,
+.btn-3 {
+    background: linear-gradient(90deg, #ff3c2a, #ff7a00);
+    border: none;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(255, 60, 42, 0.3);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
     padding: 10px 30px;
-    color: #ff3c2a;
-    border: 2px solid #ff3c2a;
-    text-transform: capitalize;
-    border-radius: 10px;
+    cursor: pointer;
 }
 
-.btn-1:hover, .btn-3:hover {
-    background-color: #ff3c2a;
-    color: #ffffff;
-    
+.btn-1:hover,
+.btn-3:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 60, 42, 0.45);
+    background: linear-gradient(90deg, #ff7a00, #ff3c2a);
 }
 
-.header-img {
-    flex-basis: 50%;
-    text-align: right;
-    border-radius: 10px;
-}
-
-.ofertas{
+.ofertas {
     padding: 100px 0;
 }
 
-h2{
+h2 {
     font-size: 40px;
     line-height: 1;
-    color:#181818;
+    color: #181818;
     margin-bottom: 10px;
 }
 
-.ofertas-content{
+.ofertas-content {
     display: flex;
     margin-bottom: 30px;
     justify-content: space-between;
@@ -181,7 +217,7 @@ h2{
 
 .oferta-1 {
     flex-basis: calc(60% - 30px);
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 25px;
     background-color: #f7fafa;
@@ -202,8 +238,9 @@ h3 {
     margin-bottom: 10px;
 }
 
-.producto-txt p{
+.producto-txt p {
     margin-bottom: 10px;
+    color: #4b4b4b;
 }
 
 .precio {
@@ -217,30 +254,26 @@ h3 {
     padding: 4px 20px;
 }
 
-.logan-1{
+.logan-1 {
     flex-basis: 40%;
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)), 
-        url('/img/BANNERAVATAR.webp'); 
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        padding: 50px;
-        border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/BANNERAVATAR.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    border-radius: 10px;
 }
-.logan-2{
+
+.logan-2 {
     flex-basis: 40%;
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)), 
-        url('/img/MisPrimerosPasosenlaFe.webp'); 
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        padding: 50px;
-        border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/MisPrimerosPasosenlaFe.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    border-radius: 10px;
 }
+
 .logan-1 h3 {
     color: #ffffff;
     font-size: 30px;
@@ -250,7 +283,7 @@ h3 {
 .logan-1 p {
     font-size: 18px;
     text-transform: uppercase;
-    color:#f7f7f7;
+    color: #f7f7f7;
     margin-bottom: 20px;
 }
 
@@ -263,50 +296,69 @@ h3 {
 .logan-2 p {
     font-size: 18px;
     text-transform: uppercase;
-    color:#f7f7f7;
+    color: #f7f7f7;
     margin-bottom: 20px;
 }
 
+/* === BOTÓN BLANCO === */
 .btn-2 {
     display: inline-block;
     padding: 10px 30px;
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
+
 .btn-2:hover {
-    background-color: #ffffff;
-    color: #ff3c2a;
+    background-color: #fff;
+    color: #ff2e00;
+    transform: translateY(-2px);
 }
+
 .btn-comprar {
     margin-top: 15px;
 }
 
-.promocion{
+.promocion {
     padding: 80px 0;
     background-color: #f7f7f7;
 }
 
-.promocion-content{
+.promocion-content {
     display: flex;
 }
 
 .promocion-txt {
     flex-basis: 50%;
-    
+}
+
+.promocion-txt h2 {
+    margin-bottom: 20px;
+    color: #181818;
+}
+
+.promocion-txt p {
+    color: #4b4b4b;
+    margin-bottom: 20px;
 }
 
 .promocion-img {
     flex-basis: 50%;
     text-align: center;
 }
+
 .promocion-img img {
     width: 250px;
     border-radius: 10px;
 }
+
 .producto {
     padding: 100px 0;
     text-align: center;
 }
+
 .producto-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -314,26 +366,28 @@ h3 {
     margin-bottom: 50px;
 }
 
-.blog{
+.blog {
     padding: 50px 0 100px 0;
 }
 
-.blog-content{
+.blog-content {
     display: flex;
     justify-content: space-between;
 }
 
 .blog-1 {
     flex-basis: calc(33.33% - 30px);
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     margin-top: 25px;
     border-radius: 10px;
     overflow: hidden;
+     background: linear-gradient(90deg, rgba(241, 237, 220, 1) 0%, rgba(255, 255, 253, 1) 50%, rgba(252, 246, 232, 1) 100%);
 }
 
-.blog-txt{
+.blog-txt {
     padding: 40px;
 }
+
 .btn-4 {
     display: inline-block;
     padding: 10px 30px;
@@ -342,6 +396,7 @@ h3 {
     text-transform: capitalize;
     border-radius: 10px;
 }
+
 .btn-4:hover {
     background-color: #181818;
     color: #ffffff;
@@ -352,125 +407,167 @@ h3 {
     display: flex;
     justify-content: space-evenly;
 }
-.redes-sociales h3{
+
+.redes-sociales h3 {
     font-size: 25px;
     color: #181818;
     margin-bottom: 20px;
 }
-.redes-sociales a{
+
+.redes-sociales a {
     font-size: 18px;
     color: #181818;
     display: block;
     margin-bottom: 10px;
 }
-.redes-sociales a:hover{
+
+.redes-sociales a:hover {
     color: #ff3c2a;
 }
+
 .footer p {
     color: #4b4b4b;
     font-size: 16px;
     line-height: 1.5;
 }
-.footer p img{
+
+.footer p img {
     vertical-align: middle;
     width: 60px;
     padding: 0;
 }
+
 .developer img {
     width: 80px;
 }
 
 @media(max-width:991px) {
-    .menu{
+    .menu {
         padding: 20px;
     }
+
     .menu label {
         display: initial;
     }
+
     .menu .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #ff9000;
+        background: linear-gradient(90deg, rgba(224, 111, 58, 1) 0%, rgba(224, 160, 20, 1) 35%, rgba(255, 225, 0, 0.99) 100%);
         display: none;
     }
-    .menu .navbar ul li{
+
+    .menu .navbar ul li {
         width: 100%;
     }
-    #menu:checked ~ .navbar{
+
+    #menu:checked~.navbar {
         display: initial;
     }
-    .logo{
+
+    .logo {
         display: none;
     }
+
     .logo-img {
         width: 80px;
     }
-    .menu .navbar ul li a:hover{
-        color:#ffffff;
+
+    .menu .navbar ul li a:hover {
+        color: #ffffff;
     }
+
     .header {
         padding: 100px 30px 50px 30px;
         min-height: 0vh;
     }
+
     .header-content {
         flex-direction: column;
         text-align: center;
+        background-image: url(/img/BANNER-Celu\ \ .png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: auto;
     }
+
+    .header-img {
+        order: -1;
+        margin-bottom: 30px;
+    }
+
     .header-text {
         margin-bottom: 25px;
     }
-    .ofertas{
+
+    .ofertas {
         padding: 30px;
     }
+
     .ofertas-content {
         flex-direction: column;
     }
+
     .oferta-1 {
         margin-bottom: 30px;
     }
-    .logan-1{
+
+    .logan-1 {
         order: -2;
         margin-bottom: 30px;
     }
-     .logan-2{
+
+    .logan-2 {
         order: -2;
         margin-bottom: 30px;
     }
-    .promocion{
+
+    .promocion {
         padding: 30px;
     }
+
     .promocion-content {
         flex-direction: column;
     }
-    .promocion-txt{
+
+    .promocion-txt {
         margin-bottom: 25px;
     }
+
     .promocion-img img {
         width: 200px;
     }
-    .producto{
+
+    .producto {
         padding: 30px;
     }
+
     .producto-content {
         grid-template-columns: repeat(1, 1fr);
-        gap:0;
+        gap: 0;
     }
-    .blog{
+
+    .blog {
         padding: 30px;
     }
+
     .blog-content {
         flex-direction: column;
     }
-    .footer{
+
+    .footer {
         flex-direction: column;
         text-align: center;
         padding: 30px;
     }
+
     .redes-sociales {
         margin-bottom: 20px;
     }
+
     .developer img {
         width: 70px;
     }
