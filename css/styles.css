@@ -86,7 +86,7 @@ img {
 }
 
 .active {
-    color: #ff3c2a;
+    color: #5f7e02;
     font-weight: 600;
 }
 
@@ -302,15 +302,23 @@ h2 {
 
 .promocion-content {
     display: flex;
+    border: #5f7e02 2px solid;
+    border-radius: 10px;
+    padding: 20px 20px;
+    background-color: #f5f7f6;
 }
 
 .promocion-txt {
-    flex-basis: 50%;
+    flex-basis: 60%;
 }
 
-.promocion-txt h2 {
+.promocion h2 {
     margin-bottom: 20px;
-    color: #181818;
+    color: #636060;
+    text-align: center;
+}
+.promocion h2 span {
+    color: #5f7e02;
 }
 
 .promocion-txt p {
@@ -319,13 +327,19 @@ h2 {
 }
 
 .promocion-img {
-    flex-basis: 50%;
+    flex-basis: 40%;
     text-align: center;
 }
 
 .promocion-img img {
-    width: 250px;
-    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 70%;
+    border: #ffffff 5px solid;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .producto {
@@ -398,7 +412,7 @@ h2 {
 }
 
 .redes-sociales a:hover {
-    color: #ff3c2a;
+    color: #5f7e02;
 }
 
 .footer p {
@@ -504,7 +518,7 @@ h2 {
     }
 
     .menu .navbar ul li a:hover {
-        color: #ff7a00;
+        color: #5f7e02;
     }
 
     .header {
