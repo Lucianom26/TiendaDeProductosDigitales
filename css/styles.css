@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(90deg, rgba(224, 188, 58, 1) 0%, rgba(224, 160, 20, 1) 43%, rgba(255, 225, 0, 0.99) 100%);
+    background-color: #fffcf5;
 }
 
 img {
@@ -28,7 +28,6 @@ img {
     align-items: center;
     min-height: 80vh;
     padding: 100px 50px 50px 50px;
-    background: linear-gradient(90deg, rgba(241, 237, 220, 1) 0%, rgba(255, 255, 253, 1) 50%, rgba(252, 246, 232, 1) 100%);
 }
 
 .menu {
@@ -45,7 +44,6 @@ img {
 .logo {
     font-size: 20px;
     color: #ff3c2a;
-    text-transform: uppercase;
     font-weight: 800;
 }
 
@@ -71,7 +69,7 @@ img {
 }
 
 .menu .navbar ul li a:hover {
-    color: #ff3c2a;
+    color: #638d78;
 }
 
 #menu {
@@ -87,86 +85,67 @@ img {
     display: none;
 }
 
-.submenu {
-    position: relative;
-}
-
-.submenu #carrito {
-    display: none;
-}
-
-.submenu:hover #carrito {
-    display: block;
-    position: absolute;
-    right: 0;
-    backdrop-filter: blur(10px);
-    top: 100%;
-    z-index: 1;
-    background-color: #4e4b5076;
-    padding: 20px;
-    min-width: 400px;
-}
-
-table {
-    width: 100%;
-}
-
-th,
-td {
-    color: #ffffff;
-}
-
-.borrar {
-    background-color: #ff3c2a;
-    border-radius: 50%;
-    padding: 5px 10px;
-    color: #ffffff;
-    font-weight: 800;
-    cursor: pointer;
-}
 .active {
     color: #ff3c2a;
     font-weight: 600;
 }
+
 .header-content {
     display: flex;
     align-items: center;
     margin-top: 20px;
     justify-content: space-between;
-    background-image: url(/img/Banner-Compu-opacity.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     width: 100%;
     height: 500px;
     border-radius: 10px;
     padding: 20px;
+    gap: 20px;
 }
 
 .header-img {
-    flex-basis: 50%;
+    flex-basis: 40%;
     text-align: center;
     padding: 20px;
+    max-width: 500px;
+}
+
+.header-img img {
+    border-radius: 10px;
 }
 
 .header-txt {
-    flex-basis: 50%;
+    flex-basis: 60%;
     padding: 20px;
 }
 
 .header-txt h1 {
     font-size: 50px;
-    color: #f7f7f7;
+    color: #4b4b4b;
     line-height: 1;
-    text-transform: uppercase;
     margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header-txt h1 span {
+    color: #99b6a7;
+}
+.header-txt h3{
+    font-size: 19px;
+    color: #b39090;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .header-txt p {
-    color: #f7f7f7;
-    font-size: 18px;
+    color: #4b4b4b;
+    font-size: 14px;
     line-height: 1.5;
     margin-bottom: 30px;
+    text-align: left;
+}
+.header-txt p i {
+    color: #638d78;
+    margin-right: 10px;
 }
 
 p {
@@ -180,7 +159,8 @@ p {
 /* === BOTONES === */
 .btn-1,
 .btn-3 {
-    background: linear-gradient(90deg, #ff3c2a, #ff7a00);
+    display: inline-block;
+    background: #a51451;
     border: none;
     color: #fff;
     box-shadow: 0 6px 15px rgba(255, 60, 42, 0.3);
@@ -189,13 +169,14 @@ p {
     transition: all 0.3s ease;
     padding: 10px 30px;
     cursor: pointer;
+    font-style: italic;
 }
 
 .btn-1:hover,
 .btn-3:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(255, 60, 42, 0.45);
-    background: linear-gradient(90deg, #ff7a00, #ff3c2a);
+    background: #770c3b;
 }
 
 .ofertas {
@@ -231,28 +212,21 @@ h2 {
     margin-bottom: 10px;
 }
 
-h3 {
-    font-size: 20px;
-    color: #181818;
-    line-height: 1;
-    margin-bottom: 10px;
-}
-
 .producto-txt p {
     margin-bottom: 10px;
     color: #4b4b4b;
 }
 
 .precio {
-    color: #ff3c2a;
+    color: #638d78;
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 20px;
 }
 
-.btn-3 {
+/* .btn-3 {
     padding: 4px 20px;
-}
+} */
 
 .logan-1 {
     flex-basis: 40%;
@@ -304,17 +278,17 @@ h3 {
 .btn-2 {
     display: inline-block;
     padding: 10px 30px;
-    color: #fff;
-    border: 2px solid #fff;
+    color: #636060;
+    border: 2px solid #afc2b8;
+    background-color: #afc2b8;
     border-radius: 10px;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
 .btn-2:hover {
-    background-color: #fff;
-    color: #ff2e00;
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(175, 194, 184, 0.45);
 }
 
 .btn-comprar {
@@ -381,7 +355,6 @@ h3 {
     margin-top: 25px;
     border-radius: 10px;
     overflow: hidden;
-     background: linear-gradient(90deg, rgba(241, 237, 220, 1) 0%, rgba(255, 255, 253, 1) 50%, rgba(252, 246, 232, 1) 100%);
 }
 
 .blog-txt {
@@ -391,15 +364,18 @@ h3 {
 .btn-4 {
     display: inline-block;
     padding: 10px 30px;
-    color: #181818;
-    border: 1px solid #181818;
+    color: #638d78;
+    border: 1px solid #638d78;
     text-transform: capitalize;
     border-radius: 10px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 20px;
 }
 
 .btn-4:hover {
-    background-color: #181818;
-    color: #ffffff;
+    background-color: #afc2b8;
+    color: #7a7777;
 }
 
 .footer {
@@ -441,6 +417,58 @@ h3 {
     width: 80px;
 }
 
+/* Floating CTA (botón flotante) */
+.boton-flotante {
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    left: 0;
+    bottom: auto;
+    background: #5f7e02;
+    color: #fff;
+    padding: 0.5rem .5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    z-index: 1000;
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+.flotante-label {
+    font-size: 0.95rem;
+    line-height: 1;
+    text-align: center;
+}
+
+.flotante-label strong {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.flotante-action {
+    background: #a51451;
+    color: #fff;
+    padding: .8rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+.flotante-action:hover {
+    background: #770c3b;
+}
+
 @media(max-width:991px) {
     .menu {
         padding: 20px;
@@ -455,7 +483,7 @@ h3 {
         top: 100%;
         left: 0;
         right: 0;
-        background: linear-gradient(90deg, rgba(224, 111, 58, 1) 0%, rgba(224, 160, 20, 1) 35%, rgba(255, 225, 0, 0.99) 100%);
+        background-color: #fffcf5;
         display: none;
     }
 
@@ -476,7 +504,7 @@ h3 {
     }
 
     .menu .navbar ul li a:hover {
-        color: #ffffff;
+        color: #ff7a00;
     }
 
     .header {
@@ -487,10 +515,6 @@ h3 {
     .header-content {
         flex-direction: column;
         text-align: center;
-        background-image: url(/img/BANNER-Celu\ \ .png);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
         height: auto;
     }
 
@@ -570,5 +594,28 @@ h3 {
 
     .developer img {
         width: 70px;
+    }
+
+    .boton-flotante {
+        top: 10;
+        padding: 1rem;
+        flex-direction: column;
+        /* coloca el label y el botón uno debajo del otro */
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .flotante-label {
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
+
+    .flotante-label strong {
+        font-size: 1.1rem;
+    }
+
+    .flotante-action {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
     }
 }
