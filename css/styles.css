@@ -4,6 +4,7 @@
     --verdeOlivia: #4c6e4c;
     --verdeLima: #8fa243;
     --blancoCrema: #f7f8e7;
+    --fondo: #f5f2ef;
     --marron: #6d584a;
     --marronOscuro: #3f342c;
     --rojoVino: #b33a3a;
@@ -26,7 +27,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--blancoCrema);
+    background-color: var(--fondo);
 }
 
 img {
@@ -447,12 +448,15 @@ h2 {
     margin-bottom: 20px;
     line-height: 1.6;
 }
+
 .promocion-txt p span {
-     color: var(--verdeOlivia);
+    color: var(--verdeOlivia);
 }
+
 .promocion-txt p strong {
-     color: var(--verdeOlivia);
+    color: var(--verdeOlivia);
 }
+
 .promocion-txt .btn1 {
     display: inline-block;
 }
@@ -590,19 +594,19 @@ h2 {
 
 .redes-sociales h3 {
     font-size: 25px;
-    color: #181818;
+    color: var(--negro);
     margin-bottom: 20px;
 }
 
 .redes-sociales a {
     font-size: 18px;
-    color: #181818;
+    color: var(--marronOscuro);
     display: block;
     margin-bottom: 10px;
 }
 
 .redes-sociales a:hover {
-    color: #5f7e02;
+    color: var(--verdeOlivia);
 }
 
 .footer p {
@@ -723,6 +727,16 @@ h2 {
 
     .header-img {
         margin-bottom: 30px;
+    }
+
+    .header-img p {
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .header-txt p i {
+        margin-right: 10px;
     }
 
     .header-text {
