@@ -198,7 +198,6 @@ img {
 
 .header .salmo {
     margin-bottom: 25px;
-    margin-left: 40px;
     font-weight: 500;
 }
 
@@ -285,6 +284,10 @@ h2 {
 /* Texto con ícono */
 .btn-contenedor {
     text-align: center;
+}
+
+.producto h2 span {
+    color: var(--verdeLima);
 }
 
 .producto-content {
@@ -387,7 +390,7 @@ h2 {
     display: inline-block;
     margin: 0 auto;
     padding: 10px 30px;
-    color: #4d4c4c;
+    color: #ffffff;
     border: 2px solid var(--verdeLima);
     background-color: var(--verdeLima);
     border-radius: 10px;
@@ -397,10 +400,10 @@ h2 {
 }
 
 .btn-2:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(175, 194, 184, 0.60);
     background-color: var(--verdeOlivia);
-    color: var(--blanco);
+    color: var(--verdeLima);
 }
 
 .btn-comprar {
@@ -519,8 +522,8 @@ h2 {
 }
 
 .blog-1:hover {
+    color: var(--verdeOlivia);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease;
 }
 
 .blog-subtitulo {
@@ -533,31 +536,30 @@ h2 {
 }
 
 .blog-subtitulo img {
-    width: 50px;
+    width: 60px;
     /* ajustá el tamaño según necesites */
-    height: 50px;
+    height: 60px;
     border-radius: 10px;
     object-fit: contain;
     margin: 10px 10px;
     /* evita que la imagen se deforme */
     background: linear-gradient(119deg, rgba(143, 162, 67, 1) 22%, rgba(155, 191, 155, 1) 71%);
     color: var(--blanco);
-    ;
 }
 
 .blog-subtitulo p {
     padding: 5px;
-    border: 2px solid var(--verdeOlivia);
-    background-color: var(--blanco);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--verdeOlivia);
     border-radius: 10px;
     margin: 10px 10px;
-    /* elimina márgenes por defecto */
     flex: 1;
-    /* 🔹 hace que el texto ocupe el espacio restante */
+    /* elimina márgenes por defecto */
 }
 
 .blog-txt {
-    padding: 40px;
+    padding: 30px;
 }
 
 .blog-txt h3 {
@@ -570,20 +572,53 @@ h2 {
     font-size: 18px;
 }
 
+.blog-2 {
+    grid-column: span 3;
+    /* ocupa dos columnas */
+    background: linear-gradient(119deg, rgba(143, 162, 67, 1) 22%, rgba(155, 191, 155, 1) 71%);
+    ;
+    border: 2px solid var(--verdeLima);
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-2:hover {
+    transform: translateY(-5px);
+}
+
+.blog img {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.blog-txt-2 p {
+    font-size: 24px;
+    line-height: 1.8;
+    color: var(--blanco);
+    margin: 0;
+}
+
 .btn-4 {
     display: inline-block;
     padding: 10px 30px;
-    color: var(--verdeLima);
+    background-color: var(--blancoCrema);
+    color: var(--verdeOlivia);
     border: 1px solid var(--verdeLima);
     border-radius: 10px;
-    font-weight: 700;
+    font-weight: 600;
     font-style: italic;
     margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-4:hover {
-    background-color: var(--verdeLima);
-    color: var(--marron);
+    transform: translateY(3px);
+    background-color: var(--verdeOlivia);
+    color: var(--blancoCrema);
 }
 
 .footer {
@@ -676,6 +711,78 @@ h2 {
     background: #770c3b;
 }
 
+.video-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--fondo);
+}
+
+.video-title {
+  color: var(--marron);
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 16 / 9; /* 🔹 Mantiene proporción constante */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: #000; /* Evita parpadeos de fondo */
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔹 mantiene tamaño sin deformar */
+  border-radius: 15px;
+  display: block;
+}
+
+video, 
+.play-btn{
+   transition: all 0.3s ease; 
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* 🔹 Responsivo: en móvil los videos se apilan */
+@media (max-width: 900px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
 @media(max-width:991px) {
     .menu {
         padding: 20px;
@@ -729,10 +836,24 @@ h2 {
         margin-bottom: 30px;
     }
 
+    .header-img h3 {
+        font-size: 16px;
+        text-align: justify;
+    }
+
     .header-img p {
         line-height: 1.5;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         text-align: left;
+    }
+
+    .header-txt h1 {
+        font-size: 50px;
+    }
+
+    .header-txt h3{
+        text-align: justify;
+        font-size: 16px;
     }
 
     .header-txt p i {
@@ -758,6 +879,14 @@ h2 {
     }
 
     .producto-txt-2 p {
+        font-size: 18px;
+    }
+
+    .blog-2 {
+        grid-column: auto;
+    }
+
+    .blog-txt-2 p {
         font-size: 18px;
     }
 
