@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --verdeOlivia: #4c6e4c;
+    --tiktok: linear-gradient(100deg, #010101, #69C9D0, #FFFFFF, #EE1D52);
+    --verdeOlivia: #588157;
+    --negro: #000000;
+    --gmail:#D14836;
+    --blanco: #ffffff;
+    --instagram: #E4405F;
+    --facebook: #1877F2;
+    --whatsapp: #25D366;
+    --threads: #000000;
     --verdeLima: #8fa243;
     --blancoCrema: #f7f8e7;
     --fondo: #f5f2ef;
@@ -9,8 +17,7 @@
     --marronOscuro: #3f342c;
     --rojoVino: #b33a3a;
     --naranjaApagado: #988780;
-    --blanco: #fff;
-    --negro: #333;
+    --negroClaro: #333;
     --grisClaro: rgba(219, 219, 219, 0.664);
     --gris: gray;
 }
@@ -537,22 +544,16 @@ h2 {
 
 .blog-subtitulo img {
     width: 60px;
-    /* ajustá el tamaño según necesites */
     height: 60px;
-    border-radius: 10px;
-    object-fit: contain;
     margin: 10px 10px;
-    /* evita que la imagen se deforme */
-    background: linear-gradient(119deg, rgba(143, 162, 67, 1) 22%, rgba(155, 191, 155, 1) 71%);
-    color: var(--blanco);
+
 }
 
 .blog-subtitulo p {
     padding: 5px;
     font-style: italic;
     font-weight: 600;
-    color: var(--verdeOlivia);
-    border-radius: 10px;
+    color: var(--naranjaApagado);
     margin: 10px 10px;
     flex: 1;
     /* elimina márgenes por defecto */
@@ -590,9 +591,9 @@ h2 {
 }
 
 .blog img {
-    border-radius: 20px;
+    /* border-radius: 20px; */
     margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
 }
 
 .blog-txt-2 p {
@@ -600,6 +601,314 @@ h2 {
     line-height: 1.8;
     color: var(--blanco);
     margin: 0;
+}
+
+/* === SECCIÓN PASOS === */
+.pasos {
+    background-color: var(--fondo);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.pasos h2 {
+    font-size: 2rem;
+    color: var(--marron);
+    margin-bottom: 60px;
+}
+
+.pasos h2 span {
+    color: var(--verdeLima);
+}
+
+/* === GRID === */
+.pasos-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* === TARJETA DE PASO === */
+.paso-card {
+    background-color: var(--blanco);
+    border: 2px solid var(--verdeLima);
+    border-radius: 20px;
+    padding: 30px 20px 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* === CABECERA DEL PASO === */
+.paso-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Imagen arriba */
+.paso-header img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Número de paso centrado en círculo */
+.paso-numero {
+    width: 60px;
+    height: 60px;
+    background-color: var(--verdeLima);
+    color: var(--blanco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === TEXTO DEL PASO === */
+.paso-txt h3 {
+    color: var(--marronOscuro);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.paso-txt p {
+    color: var(--marron);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.testimonios {
+    background-color: var(--fondo);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.titulo-testimonios {
+    font-size: 2rem;
+    color: var(--marron);
+    margin-bottom: 50px;
+}
+
+.titulo-testimonios span {
+    color: var(--verdeLima);
+}
+
+/* === GRID === */
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === TARJETAS === */
+.testimonio-card {
+    background-color: var(--blancoCrema);
+    border: 2px solid var(--verdeLima);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonio-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.testimonio-card h3 {
+    margin-bottom: 10px;
+    color: var(--negro);
+}
+
+.testimonio-card p {
+    font-style: italic;
+    text-align: justify;
+}
+
+.estrellas {
+    color: gold;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.grande {
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: #eaf8e6;
+    border-color: #b4d99a;
+}
+
+.testimonio-card p {
+    font-size: 0.95rem;
+    color: var(--negro);
+    line-height: 1.5;
+}
+
+.compra {
+    background: var(--fondo);
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--marronOscuro);
+}
+
+.container-compra {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Título e imagen del pack */
+.container-compra h2 {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    color: var(--marron);
+    margin-bottom: 20px;
+}
+
+.container-compra h2 span {
+    color: var(--verdeLima);
+}
+
+.container-compra img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    justify-self: center;
+}
+
+/* Lista de beneficios */
+.lista-beneficios {
+    text-align: left;
+}
+
+.lista-beneficios ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 40px;
+    max-width: 500px;
+}
+
+.lista-beneficios li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.lista-beneficios li i {
+    color: var(--verdeLima);
+}
+
+.tachado {
+    text-decoration: line-through;
+    color: var(--rojoVino);
+    margin-left: 5px;
+}
+
+/* === PRECIO === */
+.precio-total {
+    grid-column: 1 / -1;
+    background-color: var(--blanco);
+    border: 2px solid var(--verdeLima);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 40px auto;
+    transition: all 0.3s ease;
+    max-width: 700px;
+}
+
+.precio-total:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.precio-total .antes {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.precio-total h3 {
+    color: var(--marronOscuro);
+    margin-bottom: 10px;
+}
+
+.precio-total .precio {
+    font-size: 4.5rem;
+    color: var(--verdeOlivia);
+    border-bottom: #770c3b 1px solid;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.precio-total .aclaracion {
+    color: var(--negro);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* === BOTÓN === */
+.btn-comprar {
+    display: inline-block;
+    background: var(--rojoVino);
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: #770c3b;
+    transform: translateY(-2px);
+
+}
+
+/* === GARANTÍA === */
+.garantia {
+    grid-column: 1 / -1;
+    margin-top: 40px;
+    text-align: center;
+    background-color: var(--fondo);
+}
+
+.garantia img {
+    max-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.garantia p {
+    max-width: 700px;
+    margin: 10px auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .btn-4 {
@@ -625,7 +934,11 @@ h2 {
     padding: 50px 0;
     display: flex;
     justify-content: space-evenly;
+    border-top: 2px solid var(--verdeLima);
+    background-color: #f8f8f8;
 }
+
+
 
 .redes-sociales h3 {
     font-size: 25px;
@@ -635,25 +948,35 @@ h2 {
 
 .redes-sociales a {
     font-size: 18px;
-    color: var(--marronOscuro);
     display: block;
     margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--negro);
+    transition: 0.3s;
+}
+
+/* Colores oficiales */
+.instagram i {
+    color: var(--instagram);
+}
+
+.facebook i {
+    color: var(--facebook);
+}
+
+.whatsapp i {
+    color: var(--whatsapp);
+}
+
+.threads i {
+    color: var(--threads);
+}
+.gmail i {
+    color: var(--gmail);
 }
 
 .redes-sociales a:hover {
-    color: var(--verdeOlivia);
-}
-
-.footer p {
-    color: #4b4b4b;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.footer p img {
-    vertical-align: middle;
-    width: 60px;
-    padding: 0;
+    color: var(--marron);
 }
 
 .developer img {
@@ -712,77 +1035,358 @@ h2 {
 }
 
 .video-section {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: var(--fondo);
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--fondo);
 }
 
 .video-title {
-  color: var(--marron);
-  font-size: 28px;
-  margin-bottom: 40px;
+    color: var(--marron);
+    font-size: 28px;
+    margin-bottom: 40px;
 }
 
 .video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
 }
 
 .video-container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 16 / 9; /* 🔹 Mantiene proporción constante */
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  background-color: #000; /* Evita parpadeos de fondo */
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 16 / 9;
+    /* 🔹 Mantiene proporción constante */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+    /* Evita parpadeos de fondo */
 }
 
 video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 🔹 mantiene tamaño sin deformar */
-  border-radius: 15px;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 🔹 mantiene tamaño sin deformar */
+    border-radius: 15px;
+    display: block;
 }
 
-video, 
-.play-btn{
-   transition: all 0.3s ease; 
-}
+video,
 .play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  color: #333;
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #333;
+    transition: all 0.3s ease;
 }
 
 .play-btn:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transform: translate(-50%, -50%) scale(1.1);
+    background-color: rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.faq-section {
+    padding: 80px 20px;
+    background-color: var(--fondo);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--marronOscuro);
+    margin-bottom: 50px;
+}
+
+.faq-content {
+    display: grid;
+    gap: 20px;
+}
+
+.faq-item {
+    border: 2px solid var(--verdeLima);
+    border-radius: 15px;
+    background-color: var(--blanco);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--marronOscuro);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px 50px 20px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f5f5f5;
+}
+
+.faq-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--verdeLima);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 20px;
+    background-color: var(--blancoCrema);
+}
+
+.faq-answer p {
+    color: var(--marron);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Estado activo */
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    /* altura suficiente para el texto */
+    padding: 15px 20px 25px;
+}
+
+.faq-item.active .faq-icon {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.oferta-especial {
+    background-color: var(--fondo);
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--marronOscuro);
+}
+
+.oferta-container {
+    max-width: 700px;
+    margin: 0 auto;
+    border: 2px solid var(--verdeLima);
+    border-radius: 20px;
+    background: var(--blanco);
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.oferta-especial h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--marron);
+}
+
+.oferta-especial h2 span {
+    color: var(--verdeLima);
+}
+
+/* === Precios === */
+.oferta-precios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.precio-original {
+    text-decoration: line-through;
+    color: var(--rojoVino);
+    font-size: 1.5rem;
+}
+
+.precio-oferta {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--verdeOlivia);
+}
+
+/* === Lista de beneficios === */
+.oferta-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.oferta-beneficios li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.oferta-beneficios i {
+    color: var(--verdeLima);
+}
+
+/* === Botón === */
+.btn-oferta {
+    display: inline-block;
+    background: var(--rojoVino);
+    color: var(--blanco);
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 30px 0;
+    transition: all 0.3s ease;
+}
+
+.btn-oferta:hover {
+    background: var(--verdeLima);
+    color: var(--negro);
+    transform: translateY(-2px);
+}
+
+/* === Seguridad y métodos de pago === */
+.oferta-seguridad p {
+    color: var(--grisOscuro);
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+
+.metodos-pago {
+    margin-top: 40px;
+}
+
+.metodos-pago h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--marron);
+}
+
+.logos-pago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logos-pago img {
+    width: 60px;
+    height: auto;
+    filter: grayscale(40%);
+    transition: all 0.3s ease;
+    border: var(--grisClaro) 1px solid;
+    border-radius: 10px;
+}
+
+.logos-pago img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 50vh;
+    /* altura de pantalla completa */
+    background-image: url('/img/fondo-atardecer.jpg');
+    /* reemplaza con tu imagen */
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Overlay oscuro */
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semitransparente */
+    z-index: 1;
+}
+
+/* Contenido encima del overlay */
+.hero-section .hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--blanco);
+    padding: 0 20px;
+}
+
+.hero-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--blanco);
+}
+
+.hero-section button {
+    background-color: var(--verdeLima);
+    /* amarillo */
+    color: black;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section button:hover {
+    background-color: var(--verdeOlivia);
+    /* amarillo más oscuro */
 }
 
 /* 🔹 Responsivo: en móvil los videos se apilan */
 @media (max-width: 900px) {
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
 }
+
 @media(max-width:991px) {
     .menu {
         padding: 20px;
@@ -851,7 +1455,7 @@ video,
         font-size: 50px;
     }
 
-    .header-txt h3{
+    .header-txt h3 {
         text-align: justify;
         font-size: 16px;
     }
@@ -890,6 +1494,27 @@ video,
         font-size: 18px;
     }
 
+    .pasos-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .paso-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .paso-header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .paso-numero {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
     h2 {
         font-size: 28px;
     }
@@ -922,6 +1547,81 @@ video,
         grid-template-columns: 1fr;
     }
 
+    .testimonios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grande {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .testimonio-card {
+        text-align: center;
+    }
+
+    .container-compra {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .lista-beneficios {
+        text-align: left;
+    }
+
+    .lista-beneficios ul {
+        max-width: 100%;
+    }
+
+    .container-compra img {
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+
+    .precio-total .precio {
+        font-size: 3rem;
+    }
+
+    .garantia img {
+        max-width: 150px;
+    }
+
+    .faq-section {
+        padding: 60px 15px;
+    }
+
+    .faq-question {
+        font-size: 0.95rem;
+    }
+
+    .oferta-container {
+        padding: 30px 20px;
+    }
+
+    .precio-oferta {
+        font-size: 2.3rem;
+    }
+
+    .oferta-beneficios {
+        text-align: center;
+    }
+
+    .oferta-beneficios li {
+        justify-content: center;
+    }
+
+    .logos-pago img {
+        width: 50px;
+    }
+
+    .hero-section h3 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
     .footer {
         flex-direction: column;
         text-align: center;
@@ -934,6 +1634,14 @@ video,
 
     .developer img {
         width: 70px;
+    }
+
+
+    /* Opcional: Espaciado de iconos y texto */
+    .redes-sociales a i {
+        margin-right: 10px;
+        font-size: 20px;
+        vertical-align: middle;
     }
 
     .boton-flotante {
