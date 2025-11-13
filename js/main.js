@@ -1,7 +1,8 @@
-// ===============================
-//  REPRODUCTOR DE VIDEOS
-// ===============================
 document.addEventListener("DOMContentLoaded", () => {
+
+  // ===============================
+  //  REPRODUCTOR DE VIDEOS
+  // ===============================
   const buttons = document.querySelectorAll(".play-btn");
 
   buttons.forEach((btn) => {
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         video.play();
         btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
         btn.style.opacity = "0.7";
+
       } else {
         video.pause();
         btn.innerHTML = '<i class="fa-solid fa-play"></i>';
@@ -41,12 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
 
-// ===============================
-//  SECCIÓN FAQ INTERACTIVA
-// ===============================
-document.addEventListener("DOMContentLoaded", () => {
+
+
+  // ===============================
+  //  SECCIÓN FAQ INTERACTIVA
+  // ===============================
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {
@@ -61,8 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Alternar el actual
       item.classList.toggle("active");
 
-      // Animar apertura
       const answer = item.querySelector(".faq-answer");
+
       if (item.classList.contains("active")) {
         answer.style.maxHeight = answer.scrollHeight + "px";
       } else {
@@ -70,4 +72,35 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+
+
+  // ===============================
+  //  BOTÓN FLOTANTE: OCULTAR AL BAJAR, MOSTRAR AL SUBIR
+  // ===============================
+  const btnFlotante = document.getElementById("btnFlotante");
+  let ultimaPosicion = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const posicionActual = window.scrollY;
+
+    // Mostrar si está arriba del todo
+    if (posicionActual === 0) {
+      btnFlotante.classList.remove("oculto");
+      ultimaPosicion = 0;
+      return;
+    }
+
+    // Bajando → ocultar
+    if (posicionActual > ultimaPosicion) {
+      btnFlotante.classList.add("oculto");
+    }
+    // Subiendo → mostrar
+    else {
+      btnFlotante.classList.remove("oculto");
+    }
+
+    ultimaPosicion = posicionActual;
+  });
+
 });

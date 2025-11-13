@@ -4,7 +4,7 @@
     --tiktok: linear-gradient(100deg, #010101, #69C9D0, #FFFFFF, #EE1D52);
     --verdeOlivia: #588157;
     --negro: #000000;
-    --gmail:#D14836;
+    --gmail: #D14836;
     --blanco: #ffffff;
     --instagram: #E4405F;
     --facebook: #1877F2;
@@ -970,6 +970,7 @@ h2 {
 .threads i {
     color: var(--threads);
 }
+
 .gmail i {
     color: var(--gmail);
 }
@@ -1005,6 +1006,14 @@ h2 {
     width: 90vw;
     height: auto;
     margin: 0 auto;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* Estado oculto al scrollear */
+.boton-flotante.oculto {
+    transform: translateY(-200%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .flotante-label {
@@ -1270,8 +1279,8 @@ video,
 }
 
 .btn-oferta:hover {
-    background: var(--verdeLima);
-    color: var(--negro);
+    background: #770c3b;
+    color: var(--blanco);
     transform: translateY(-2px);
 }
 
@@ -1529,7 +1538,8 @@ video,
     }
 
     .promocion-img {
-        width: 200px;   /* reduce tamaño del círculo */
+        width: 200px;
+        /* reduce tamaño del círculo */
         height: 200px;
         margin-bottom: 20px;
     }
