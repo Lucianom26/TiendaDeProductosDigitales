@@ -489,7 +489,6 @@ h2 {
     height: 100%;
     object-fit: cover;
     object-position: center 20%;
-    /* 🔹 mueve la imagen hacia abajo dentro del círculo */
     border-radius: 50%;
 }
 
@@ -1525,10 +1524,19 @@ video,
 
     .promocion-content {
         flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .promocion-img {
+        width: 200px;   /* reduce tamaño del círculo */
+        height: 200px;
+        margin-bottom: 20px;
     }
 
     .promocion-txt {
-        margin-bottom: 25px;
+        flex-basis: 100%;
+        padding: 0;
     }
 
     .producto {
