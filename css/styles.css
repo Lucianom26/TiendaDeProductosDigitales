@@ -186,12 +186,12 @@ img {
 }
 
 .header-txt h3 span {
-    color: var(--verdeOlivia);
+    color: var(--verdeLima);
 }
 
 
 .header-txt p {
-    color: var(--marron);
+    color: var(--naranjaApagado);
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 10px;
@@ -200,7 +200,7 @@ img {
 
 .header-txt p i {
     color: var(--verdeLima);
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .header .salmo {
@@ -210,6 +210,24 @@ img {
 
 .header .salmo i {
     color: var(--verdeOlivia)
+}
+
+.descripcion {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.descripcion p {
+    color: var(--marronOscuro);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.descripcion p i {
+    color: var(--verdeLima);
+    background-color: var(--verdeLima);
+    border-radius: 50%;
 }
 
 p {
@@ -250,7 +268,9 @@ p {
 .ofertas {
     padding: 100px 200px;
 }
-
+.ofertas .subtitulo{
+    color: var(--verdeLima);
+}
 h2 {
     font-size: 30px;
     line-height: 1;
@@ -1475,6 +1495,21 @@ video,
     .header-text {
         order: -1;
         margin-bottom: 25px;
+    }
+
+    .descripcion {
+        display: flex;
+        flex-direction: column;
+        /* 🔹 apila uno debajo del otro */
+        align-items: center;
+        /* centra horizontalmente el contenido */
+        justify-content: center;
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    .descripcion p {
+        font-size: 16px;
     }
 
     .ofertas {
