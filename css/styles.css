@@ -100,7 +100,7 @@ img {
 }
 
 .menu-icono {
-    width: 25px;
+    width: 18px;
 }
 
 .menu label {
@@ -401,11 +401,12 @@ h2 {
     line-height: 1.8;
     color: var(--marron);
     margin: 0;
+    font-weight: 700;
 }
 
 .producto-txt-2 p span {
-    color: var(--verdeOlivia);
-    font-weight: 500;
+    color: var(--verdeLima);
+    font-weight: 700;
 }
 
 /* .btn-3 {
@@ -437,7 +438,7 @@ h2 {
     margin-top: 15px;
 }
 
-.promocion {
+/* .promocion {
     padding: 80px 0;
 }
 
@@ -510,6 +511,87 @@ h2 {
     object-fit: cover;
     object-position: center 20%;
     border-radius: 50%;
+} */
+
+/* ============================
+   SECCIÓN PROMOCIÓN (GRID)
+=============================== */
+
+.promocion {
+    padding: 80px 0;
+}
+
+.promocion-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* lado a lado en desktop */
+    align-items: center;
+    border: var(--verdeLima) 2px solid;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--blanco);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+    text-align: left;
+}
+
+.promocion-content:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Texto */
+.promocion-txt {
+    padding: 20px;
+}
+
+/* Títulos */
+.promocion h2 {
+    margin-bottom: 20px;
+    color: var(--marron);
+    text-align: center;
+}
+
+.promocion h2 span {
+    color: var(--verdeLima);
+}
+
+/* Párrafos */
+.promocion-txt p {
+    color: var(--marron);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.promocion-txt p span,
+.promocion-txt p strong {
+    color: var(--verdeOlivia);
+    font-weight: 500;
+}
+
+.promocion-txt .btn1 {
+    display: inline-block;
+}
+
+/* Imagen circular */
+.promocion-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border: var(--blanco) 3px solid;
+}
+
+.promocion-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 50%;
 }
 
 .blog {
@@ -558,23 +640,27 @@ h2 {
     align-items: center;
     /* 🔹 alinea verticalmente al centro */
     gap: 5px;
-    /* 🔹 espacio entre imagen y texto */
+    text-align: center;
 }
 
 .blog-subtitulo img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     margin: 10px 10px;
-
 }
 
 .blog-subtitulo p {
     padding: 5px;
     font-style: italic;
     font-weight: 600;
-    color: var(--naranjaApagado);
+    color: var(--marronOscuro);
     margin: 10px 10px;
     flex: 1;
+    border-radius: 10px;
+    border: 2px solid var(--verdeLima);
+    background-color: var(--blanco);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
     /* elimina márgenes por defecto */
 }
 
@@ -584,7 +670,7 @@ h2 {
 
 .blog-txt h3 {
     margin-bottom: 10px;
-    color: var(--marronOscuro);
+    color: var(--verdeLima);
     font-size: 24px;
 }
 
@@ -839,7 +925,11 @@ h2 {
     margin-bottom: 10px;
     line-height: 1.4;
 }
+.lista-beneficios .bono {
+    font-size: 1.3rem;
+    margin-top: 1rem;
 
+}
 .lista-beneficios li i {
     color: var(--verdeLima);
 }
@@ -879,13 +969,18 @@ h2 {
 .precio-total .precio {
     font-size: 4.5rem;
     color: var(--verdeOlivia);
-    border-bottom: #770c3b 1px solid;
     font-weight: 700;
     margin-bottom: 10px;
 }
+.precio-total .acceso {
+    border-bottom: var(--rojoVino) 2px solid;
+    font-size: 2.8rem;
+    color: var(--negro);
+    font-weight: 700;
+}
 
 .precio-total .aclaracion {
-    color: var(--negro);
+    color: var(--marron);
     margin-bottom: 20px;
     font-size: 1.3rem;
     font-weight: 500;
@@ -894,7 +989,7 @@ h2 {
 /* === BOTÓN === */
 .btn-comprar {
     display: inline-block;
-    background: var(--rojoVino);
+    background: var(--verdeOlivia);
     color: #fff;
     padding: 15px 40px;
     border-radius: 10px;
@@ -904,7 +999,7 @@ h2 {
 }
 
 .btn-comprar:hover {
-    background: #770c3b;
+    background: var(--verdeLima);
     transform: translateY(-2px);
 
 }
@@ -919,8 +1014,16 @@ h2 {
 
 .garantia img {
     max-width: 150px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 20px;
+}
+
+.garantia h2 {
+    color: var(--rojoVino);
+    border-bottom: var(--verdeOlivia) 2px solid;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .garantia p {
@@ -1133,7 +1236,7 @@ video,
 }
 
 .faq-section {
-    padding: 80px 20px;
+    padding: 50px 20px;
     background-color: var(--fondo);
     max-width: 900px;
     margin: 0 auto;
@@ -1262,6 +1365,7 @@ video,
     color: var(--verdeOlivia);
 }
 
+
 /* === Lista de beneficios === */
 .oferta-beneficios {
     list-style: none;
@@ -1346,9 +1450,9 @@ video,
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 50vh;
+    height: 70vh;
     /* altura de pantalla completa */
-    background-image: url('/img/fondo-atardecer.jpg');
+    background-image: url('/img/Celu.png');
     /* reemplaza con tu imagen */
     background-size: cover;
     background-repeat: none;
@@ -1406,6 +1510,13 @@ video,
 .hero-section button:hover {
     background-color: var(--verdeOlivia);
     /* amarillo más oscuro */
+}
+.linea-separador {
+    width: 80%;               /* No ocupa todo el ancho */
+    height: 3px;              /* Grosor */
+    background-color: rgba(200, 30, 60, 0.5); /* Rojo suave */
+    margin: 40px auto;        /* Separación vertical + centrado */
+    border-radius: 50px;
 }
 
 /* 🔹 Responsivo: en móvil los videos se apilan */
@@ -1563,25 +1674,22 @@ video,
     }
 
     .promocion {
-        padding: 30px;
+        padding: 60px 20px;
     }
-
-    .promocion-content {
-        flex-direction: column;
+     .promocion-content {
+        grid-template-columns: 1fr;  /* imagen arriba, texto abajo */
         text-align: center;
-        padding: 20px 10px;
-    }
-
-    .promocion-img {
-        width: 200px;
-        /* reduce tamaño del círculo */
-        height: 200px;
-        margin-bottom: 20px;
+        margin: 0 auto;
     }
 
     .promocion-txt {
-        flex-basis: 100%;
-        padding: 0;
+        padding: 10px;
+    }
+
+    .promocion-img {
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
     }
 
     .producto {
@@ -1590,6 +1698,7 @@ video,
 
     .producto-content {
         grid-template-columns: 1fr;
+        margin: 10px;
     }
 
     .blog {
@@ -1691,9 +1800,12 @@ video,
 
 
     /* Opcional: Espaciado de iconos y texto */
+    .redes-sociales a{
+        font-size: 14px;
+    }
     .redes-sociales a i {
         margin-right: 10px;
-        font-size: 20px;
+        font-size: 18px;
         vertical-align: middle;
     }
 
