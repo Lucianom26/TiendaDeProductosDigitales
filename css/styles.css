@@ -1375,9 +1375,9 @@ video,
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 70vh;
+    height: 80vh;
     /* altura de pantalla completa */
-    background-image: url('/img/Celu.png');
+    background-image: url('/img/PackBiblicoCreativo.jpg');
     /* reemplaza con tu imagen */
     background-size: cover;
     background-repeat: none;
