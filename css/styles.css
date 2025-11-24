@@ -127,40 +127,6 @@ img {
     gap: 20px;
 }
 
-.header-img {
-    padding: 10px;
-    max-width: 1200px;
-}
-
-.header-img h2 {
-    color: var(--verdeLima);
-    font-size: 32px;
-}
-
-.header-img h3 {
-    color: var(--marron);
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-weight: 400;
-    line-height: 1.6;
-}
-
-.header-img h3 span {
-    color: var(--marronOscuro);
-    font-weight: bold;
-}
-
-.header-img p i {
-    color: var(--verdeLima);
-    margin-right: 10px;
-    margin-top: 10px;
-    text-align: right;
-}
-
-.header-img img {
-    border-radius: 10px;
-}
-
 .header-txt {
     padding: 20px;
 }
@@ -177,25 +143,17 @@ img {
     color: var(--verdeLima);
 }
 
-.header-txt h3 {
-    font-size: 18px;
+.header-txt p {
+    font-size: 16px;
     color: var(--marron);
     line-height: 1.2;
     margin-bottom: 20px;
     font-weight: 600;
-}
-
-.header-txt h3 span {
-    color: var(--verdeLima);
-}
-
-
-.header-txt p {
-    color: var(--naranjaApagado);
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
     text-align: left;
+}
+
+.header-txt p span {
+    color: var(--verdeLima);
 }
 
 .header-txt p i {
@@ -205,11 +163,47 @@ img {
 
 .header .salmo {
     margin-bottom: 25px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .header .salmo i {
     color: var(--verdeOlivia)
+}
+
+.header-img {
+    padding: 10px;
+    max-width: 1200px;
+}
+
+.header-img h2 {
+    color: var(--verdeLima);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header-img p {
+    color: var(--marron);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.header-img p span {
+    color: var(--marronOscuro);
+    font-weight: bold;   
+}
+
+.header-img p i {
+    color: var(--verdeLima);
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.header-img img {
+    border-radius: 10px;
 }
 
 .descripcion {
@@ -220,7 +214,7 @@ img {
 
 .descripcion p {
     color: var(--marronOscuro);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -228,6 +222,7 @@ img {
     color: var(--verdeLima);
     background-color: var(--verdeLima);
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 p {
@@ -237,6 +232,14 @@ p {
     margin-bottom: 25px;
 }
 
+h2 {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 25px;
+    color: var(--marron);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
 
 /* === BOTONES === */
 .btn-1,
@@ -270,13 +273,7 @@ p {
 }
 .ofertas .subtitulo{
     color: var(--verdeLima);
-}
-h2 {
-    font-size: 30px;
-    line-height: 1;
-    margin-bottom: 25px;
-    color: var(--marron);
-    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .ofertas-content {
@@ -394,6 +391,7 @@ h2 {
     border-radius: 20px;
     padding: 20px 30px;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .producto-txt-2 p {
@@ -437,81 +435,6 @@ h2 {
 .btn-comprar {
     margin-top: 15px;
 }
-
-/* .promocion {
-    padding: 80px 0;
-}
-
-.promocion-content {
-    display: flex;
-    border: var(--verdeLima) 2px solid;
-    border-radius: 10px;
-    padding: 20px 20px;
-    background-color: var(--blanco);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    gap: 20px;
-    text-align: center;
-}
-
-.promocion-content:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease;
-}
-
-.promocion-txt {
-    flex-basis: 60%;
-    padding: 20px;
-
-}
-
-.promocion h2 {
-    margin-bottom: 20px;
-    color: var(--marron);
-    text-align: center;
-}
-
-.promocion h2 span {
-    color: var(--verdeLima);
-}
-
-.promocion-txt p {
-    color: var(--marron);
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.promocion-txt p span {
-    color: var(--verdeOlivia);
-}
-
-.promocion-txt p strong {
-    color: var(--verdeOlivia);
-}
-
-.promocion-txt .btn1 {
-    display: inline-block;
-}
-
-.promocion-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border: var(--blanco) 3px solid;
-    margin: auto 0;
-}
-
-.promocion-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 20%;
-    border-radius: 50%;
-} */
 
 /* ============================
    SECCIÓN PROMOCIÓN (GRID)
@@ -562,10 +485,9 @@ h2 {
     line-height: 1.6;
 }
 
-.promocion-txt p span,
-.promocion-txt p strong {
+.promocion-txt p span {
     color: var(--verdeOlivia);
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .promocion-txt .btn1 {
@@ -600,9 +522,9 @@ h2 {
     text-align: center;
 }
 
-.blog p {
+.blog h3 {
     display: inline-block;
-    font-size: 24px;
+    color: var(--marron);
 }
 
 .subtitulo {
@@ -671,11 +593,11 @@ h2 {
 .blog-txt h3 {
     margin-bottom: 10px;
     color: var(--verdeLima);
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .blog-txt p {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .blog-2 {
@@ -703,8 +625,10 @@ h2 {
 
 .blog-txt-2 p {
     font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.8;
     color: var(--blanco);
+    font-weight: 700;
     margin: 0;
 }
 
@@ -783,13 +707,14 @@ h2 {
 /* === TEXTO DEL PASO === */
 .paso-txt h3 {
     color: var(--marronOscuro);
-    font-size: 1.2rem;
+    font-size: 16px;
     margin-bottom: 10px;
+
 }
 
 .paso-txt p {
     color: var(--marron);
-    font-size: 0.95rem;
+    font-size: 14px;
     line-height: 1.6;
     max-width: 300px;
     margin: 0 auto;
@@ -1484,9 +1409,10 @@ video,
     padding: 0 20px;
 }
 
-.hero-section h3 {
+.hero-section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--blanco);
 }
 
 .hero-section p {
@@ -1498,7 +1424,7 @@ video,
 .hero-section button {
     background-color: var(--verdeLima);
     /* amarillo */
-    color: black;
+    color: var(--blanco);
     font-weight: bold;
     padding: 12px 24px;
     border: none;
@@ -1513,7 +1439,7 @@ video,
 }
 .linea-separador {
     width: 80%;               /* No ocupa todo el ancho */
-    height: 3px;              /* Grosor */
+    height: 6px;              /* Grosor */
     background-color: rgba(200, 30, 60, 0.5); /* Rojo suave */
     margin: 40px auto;        /* Separación vertical + centrado */
     border-radius: 50px;
