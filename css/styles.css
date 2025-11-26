@@ -32,6 +32,19 @@
     list-style: none;
 }
 
+.fadeInUp {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUp .8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--fondo);
@@ -167,7 +180,7 @@ img {
 }
 
 .header .salmo i {
-    color: var(--verdeOlivia)
+    color: var(--verdeLima);
 }
 
 .header-img {
@@ -191,7 +204,7 @@ img {
 
 .header-img p span {
     color: var(--marronOscuro);
-    font-weight: bold;   
+    font-weight: bold;
 }
 
 .header-img p i {
@@ -271,7 +284,8 @@ h2 {
 .ofertas {
     padding: 100px 200px;
 }
-.ofertas .subtitulo{
+
+.ofertas .subtitulo {
     color: var(--verdeLima);
     font-family: 'Times New Roman', Times, serif;
 }
@@ -446,7 +460,8 @@ h2 {
 
 .promocion-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* lado a lado en desktop */
+    grid-template-columns: 1fr 1fr;
+    /* lado a lado en desktop */
     align-items: center;
     border: var(--verdeLima) 2px solid;
     border-radius: 10px;
@@ -486,7 +501,7 @@ h2 {
 }
 
 .promocion-txt p span {
-    color: var(--verdeOlivia);
+    color: var(--verdeLima);
     font-weight: 700;
 }
 
@@ -582,7 +597,7 @@ h2 {
     border: 2px solid var(--verdeLima);
     background-color: var(--blanco);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    
+
     /* elimina márgenes por defecto */
 }
 
@@ -730,6 +745,7 @@ h2 {
     font-size: 2rem;
     color: var(--marron);
     margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 .titulo-testimonios span {
@@ -798,143 +814,205 @@ h2 {
     line-height: 1.5;
 }
 
-.compra {
-    background: var(--fondo);
-    padding: 80px 20px;
-    text-align: center;
-    color: var(--marronOscuro);
-}
-
 .container-compra {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 40px;
+    text-align: center;
 }
 
-/* Título e imagen del pack */
-.container-compra h2 {
-    grid-column: 1 / -1;
-    font-size: 2rem;
-    color: var(--marron);
-    margin-bottom: 20px;
+/* -------------------
+    TITULOS
+-------------------- */
+
+.titulo-principal,
+.titulo-testimonios {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 25px;
 }
 
-.container-compra h2 span {
+.titulo-principal span,
+.titulo-testimonios span {
     color: var(--verdeLima);
 }
 
-.container-compra img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 20px;
-    justify-self: center;
+/* -------------------
+    MOCKUPS
+-------------------- */
+
+.mockups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    /* margin-bottom: 25px; */
+    padding: 10px;
 }
 
-/* Lista de beneficios */
+.mockups-grid img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    object-position: center 60%;
+    border-radius: 12px;
+    border: 2px solid var(--verdeLima); 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    transition: transform .3s ease;
+}
+
+.mockups-grid img:hover {
+    transform: scale(1.03);
+} 
+
+/* -------------------
+    CARD (BONOS / LISTAS)
+-------------------- */
+
+.card {
+    background: var(--blanco); 
+    padding: 20px;
+    border-radius: 14px; 
+    margin: 20px 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--verdeLima);
+    max-width: 600px;
+}
+
+/* -------------------
+    LISTA BENEFICIOS
+-------------------- */
 .lista-beneficios {
-    text-align: left;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
 }
-
 .lista-beneficios ul {
     list-style: none;
-    padding: 0;
-    margin: 0 auto 40px;
-    max-width: 500px;
+    padding: 10px;
+    border: 2px solid var(--verdeLima);
 }
 
 .lista-beneficios li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    line-height: 1.4;
+    margin: 12px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
-.lista-beneficios .bono {
-    font-size: 1.3rem;
-    margin-top: 1rem;
 
-}
-.lista-beneficios li i {
+.lista-beneficios i {
+    margin-right: 10px;
     color: var(--verdeLima);
+    font-size: 22px;
+}
+
+/* -------------------
+    BONOS
+-------------------- */
+
+.bono-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+
+.bono-item img {
+    width: 130px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bono-texto h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.bono-texto p {
+    margin-top: 5px;
+    font-size: 24px;
+    color: var(--verdeLima);
+    font-weight: bold;
+}
+
+/* -------------------
+    PRECIO
+-------------------- */
+
+.precio-total {
+    text-align: center;
+    margin: 0 auto 20px auto;
+    /* CENTRADO EN PANTALLAS GRANDES */
+    /* border: 2px solid var(--verdeLima);
+    background-color: var(--blanco); */
+    padding: 30px 20px;
+    /* border-radius: 20px; */
+    max-width: 700px;
+    /* ANCHO MÁXIMO */
+    width: 100%;
+    /* PERMITE ADAPTARSE AL RESPONSIVE */
+    display: block;
+    box-sizing: border-box;
+}
+
+.precio {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--verdeOlivia);
 }
 
 .tachado {
     text-decoration: line-through;
     color: var(--rojoVino);
-    margin-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
-/* === PRECIO === */
-.precio-total {
-    grid-column: 1 / -1;
-    background-color: var(--blanco);
-    border: 2px solid var(--verdeLima);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 40px auto;
-    transition: all 0.3s ease;
-    max-width: 700px;
+.acceso {
+    font-size: 32px;
+    color: var(--rojoVino);
+    margin-top: 10px;
+    font-weight: 600;
+    border-bottom: var(--verdeLima) 2px solid;
 }
 
-.precio-total:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.precio-total .antes {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.precio-total h3 {
-    color: var(--marronOscuro);
-    margin-bottom: 10px;
-}
-
-.precio-total .precio {
-    font-size: 4.5rem;
-    color: var(--verdeOlivia);
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-.precio-total .acceso {
-    border-bottom: var(--rojoVino) 2px solid;
-    font-size: 2.8rem;
-    color: var(--negro);
-    font-weight: 700;
-}
-
-.precio-total .aclaracion {
-    color: var(--marron);
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    font-weight: 500;
-}
-
-/* === BOTÓN === */
 .btn-comprar {
     display: inline-block;
-    background: var(--verdeOlivia);
+    background: linear-gradient(45deg, #146822, #258a22);
+    padding: 15px 35px;
     color: #fff;
-    padding: 15px 40px;
-    border-radius: 10px;
-    font-weight: bold;
+    border-radius: 50px;
+    font-size: 22px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: transform .2s ease, box-shadow .3s ease;
+    font-weight: 700;
 }
 
 .btn-comprar:hover {
-    background: var(--verdeLima);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(149, 230, 57, 0.4);
+}
 
+/* -------------------
+    GARANTIA
+-------------------- */
+
+.garantia img {
+    max-width: 220px;
+    margin: 10px auto;
+    display: block;
 }
 
 /* === GARANTÍA === */
 .garantia {
     grid-column: 1 / -1;
-    margin-top: 40px;
+    margin: 0 auto 20px auto;
     text-align: center;
     background-color: var(--fondo);
+    max-width: 600px;
 }
 
 .garantia img {
@@ -945,10 +1023,12 @@ h2 {
 
 .garantia h2 {
     color: var(--rojoVino);
-    border-bottom: var(--verdeOlivia) 2px solid;
+    border-bottom: var(--verdeLima) 2px solid;
     padding-bottom: 10px;
     margin-bottom: 20px;
     margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .garantia p {
@@ -957,6 +1037,56 @@ h2 {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+/* -------------------
+    RESPONSIVE
+-------------------- */
+
+@media (max-width: 768px) {
+    .bono-item {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .bono-item img {
+        width: 90%;
+    }
+    .lista-beneficios ul {
+        max-width: 100%;
+        margin: 10px;
+    }
+    .lista-beneficios li {
+        font-size: 14px;
+    }
+    .lista-beneficios i {
+        font-size: 16px;
+    }
+    .tachado{
+        font-size: 16px;
+    }
+}
+
+/*  Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+    .precio-total {
+        margin: 20px auto 20px auto;
+        /* Sigue centrado */
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .precio-total .precio {
+        font-size: 36px;
+        /* Tamaño de precio más razonable */
+    }
+
+    .btn-comprar {
+        font-size: 18px;
+        padding: 12px 20px;
+    }
+}
+
+
 
 .btn-4 {
     display: inline-block;
@@ -982,10 +1112,8 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     border-top: 2px solid var(--verdeLima);
-    background-color: #f8f8f8;
+    background-color: var(--fondo);
 }
-
-
 
 .redes-sociales h3 {
     font-size: 25px;
@@ -1001,7 +1129,12 @@ h2 {
     color: var(--negro);
     transition: 0.3s;
 }
-
+.footer-mobile {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--fondo);
+}
 /* Colores oficiales */
 .instagram i {
     color: var(--instagram);
@@ -1314,25 +1447,6 @@ video,
     color: var(--verdeLima);
 }
 
-/* === Botón === */
-.btn-oferta {
-    display: inline-block;
-    background: var(--rojoVino);
-    color: var(--blanco);
-    padding: 15px 40px;
-    border-radius: 10px;
-    font-weight: bold;
-    text-decoration: none;
-    margin: 30px 0;
-    transition: all 0.3s ease;
-}
-
-.btn-oferta:hover {
-    background: #770c3b;
-    color: var(--blanco);
-    transform: translateY(-2px);
-}
-
 /* === Seguridad y métodos de pago === */
 .oferta-seguridad p {
     color: var(--grisOscuro);
@@ -1375,9 +1489,9 @@ video,
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 80vh;
+    height: 70vh;
     /* altura de pantalla completa */
-    background-image: url('/img/PackBiblicoCreativo.jpg');
+    background-image: url('/img/fondo-footer.jpeg');
     /* reemplaza con tu imagen */
     background-size: cover;
     background-repeat: none;
@@ -1421,7 +1535,7 @@ video,
     color: var(--blanco);
 }
 
-.hero-section button {
+.hero-section a {
     background-color: var(--verdeLima);
     /* amarillo */
     color: var(--blanco);
@@ -1433,16 +1547,44 @@ video,
     transition: background-color 0.3s ease;
 }
 
-.hero-section button:hover {
+.hero-section a:hover {
     background-color: var(--verdeOlivia);
     /* amarillo más oscuro */
 }
+
 .linea-separador {
-    width: 80%;               /* No ocupa todo el ancho */
-    height: 6px;              /* Grosor */
-    background-color: rgba(200, 30, 60, 0.5); /* Rojo suave */
-    margin: 40px auto;        /* Separación vertical + centrado */
+    width: 80%;
+    /* No ocupa todo el ancho */
+    height: 6px;
+    /* Grosor */
+    background-color: rgba(200, 30, 60, 0.5);
+    /* Rojo suave */
+    margin: 40px auto;
+    /* Separación vertical + centrado */
     border-radius: 50px;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* verde whatsapp */
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 999;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
 /* 🔹 Responsivo: en móvil los videos se apilan */
@@ -1602,8 +1744,10 @@ video,
     .promocion {
         padding: 60px 20px;
     }
-     .promocion-content {
-        grid-template-columns: 1fr;  /* imagen arriba, texto abajo */
+
+    .promocion-content {
+        grid-template-columns: 1fr;
+        /* imagen arriba, texto abajo */
         text-align: center;
         margin: 0 auto;
     }
@@ -1726,9 +1870,10 @@ video,
 
 
     /* Opcional: Espaciado de iconos y texto */
-    .redes-sociales a{
+    .redes-sociales a {
         font-size: 14px;
     }
+
     .redes-sociales a i {
         margin-right: 10px;
         font-size: 18px;
