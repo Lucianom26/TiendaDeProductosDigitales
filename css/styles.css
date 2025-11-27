@@ -12,7 +12,7 @@
     --threads: #000000;
     --verdeLima: #8fa243;
     --blancoCrema: #f7f8e7;
-    --fondo: #f5f2ef;
+    --fondo: #F2EBE5;
     --marron: #6d584a;
     --marronOscuro: #3f342c;
     --rojoVino: #b33a3a;
@@ -457,7 +457,6 @@ h2 {
 
 .promocion {
     padding: 20px;
-    border: #000 2px solid;
 }
 
 .promocion-content {
@@ -1144,9 +1143,8 @@ h2 {
 }
 
 .footer {
-    padding: 50px 0;
+    padding: 30px 0;
     display: flex;
-
     justify-content: space-evenly;
     border-top: 2px solid var(--verdeLima);
     background-color: var(--fondo);
@@ -1155,7 +1153,7 @@ h2 {
 .redes-sociales h3 {
     font-size: 25px;
     color: var(--negro);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .redes-sociales a {
@@ -1894,6 +1892,10 @@ video,
 
     .logos-pago img {
         width: 50px;
+    }
+
+    .hero-section {
+        background-image: url('/img/fondo-celu-footer.jpeg');
     }
 
     .hero-section h3 {
