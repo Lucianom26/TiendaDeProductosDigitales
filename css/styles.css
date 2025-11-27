@@ -63,8 +63,8 @@ img {
 .header {
     display: flex;
     align-items: center;
-    min-height: 80vh;
-    padding: 100px 50px 50px 50px;
+    min-height: 70vh;
+    padding: 100px 50px 20px 50px;
 }
 
 .menu {
@@ -133,7 +133,7 @@ img {
     align-items: center;
     /* centra horizontalmente el contenido */
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
     border-radius: 10px;
     padding: 10px;
@@ -200,6 +200,7 @@ img {
     font-weight: 400;
     line-height: 1.6;
     font-size: 16px;
+    
 }
 
 .header-img p span {
@@ -242,13 +243,13 @@ p {
     color: var(--marron);
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 h2 {
     font-size: 32px;
     line-height: 1;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     color: var(--marron);
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -268,6 +269,7 @@ h2 {
     padding: 10px 20px;
     cursor: pointer;
     font-style: italic;
+    margin-top: 20px;
 }
 
 .btn-1:hover,
@@ -282,7 +284,7 @@ h2 {
 }
 
 .ofertas {
-    padding: 100px 200px;
+    padding: 10px 100px;
 }
 
 .ofertas .subtitulo {
@@ -294,7 +296,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Tarjetas normales */
@@ -327,12 +329,14 @@ h2 {
 .producto h2 span {
     color: var(--verdeLima);
 }
-
+.producto {
+    margin-top: 10px;
+}
 .producto-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 50px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .producto-1 {
@@ -421,9 +425,7 @@ h2 {
     font-weight: 700;
 }
 
-/* .btn-3 {
-    padding: 4px 20px;
-} */
+
 
 /* === BOTÓN BLANCO === */
 .btn-2 {
@@ -443,7 +445,6 @@ h2 {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(175, 194, 184, 0.60);
     background-color: var(--verdeOlivia);
-    color: var(--verdeLima);
 }
 
 .btn-comprar {
@@ -455,7 +456,8 @@ h2 {
 =============================== */
 
 .promocion {
-    padding: 80px 0;
+    padding: 20px;
+    border: #000 2px solid;
 }
 
 .promocion-content {
@@ -479,12 +481,12 @@ h2 {
 
 /* Texto */
 .promocion-txt {
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Títulos */
 .promocion h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: var(--marron);
     text-align: center;
 }
@@ -532,14 +534,15 @@ h2 {
 }
 
 .blog {
-    margin-top: 20px;
-    padding: 50px 0 100px 0;
+    margin-top: 10px;
+    padding: 20px 0 20px 0;
     text-align: center;
 }
 
 .blog h3 {
     display: inline-block;
     color: var(--marron);
+    margin-bottom: 20px;
 }
 
 .subtitulo {
@@ -553,13 +556,12 @@ h2 {
 .blog-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 50px;
+    gap: 20px;
+    margin-bottom: 10px;
 }
 
 .blog-1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    margin-top: 25px;
     border-radius: 20px;
     overflow: hidden;
     border: var(--verdeLima) 2px solid;
@@ -633,7 +635,7 @@ h2 {
 }
 
 .blog img {
-    /* border-radius: 20px; */
+    border-radius: 20px;
     margin-bottom: 20px;
 
 }
@@ -650,14 +652,13 @@ h2 {
 /* === SECCIÓN PASOS === */
 .pasos {
     background-color: var(--fondo);
-    padding: 80px 20px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 .pasos h2 {
     font-size: 2rem;
     color: var(--marron);
-    margin-bottom: 60px;
 }
 
 .pasos h2 span {
@@ -668,7 +669,7 @@ h2 {
 .pasos-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -737,7 +738,7 @@ h2 {
 
 .testimonios {
     background-color: var(--fondo);
-    padding: 80px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -745,7 +746,7 @@ h2 {
     font-size: 2rem;
     color: var(--marron);
     margin-bottom: 50px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .titulo-testimonios span {
@@ -819,6 +820,23 @@ h2 {
     margin: 0 auto;
     text-align: center;
 }
+.titulo-con-icono {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* espacio entre imagen y texto */
+    justify-content: center; /* opcional: centrar en pantalla */
+    text-align: left;
+    margin: 15px;
+}
+
+.titulo-con-icono img {
+    width: 30px;  /* ajusta tamaño */
+    height: auto;
+}
+
+.titulo-con-icono h2 {
+    margin: 0;
+}
 
 /* -------------------
     TITULOS
@@ -843,26 +861,31 @@ h2 {
 
 .mockups-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    /* margin-bottom: 25px; */
+    grid-template-columns: 1fr;
+    gap: 20px;
     padding: 10px;
 }
 
-.mockups-grid img {
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    object-position: center 60%;
+/* Estilo general */
+.mockups-grid .mockups {
+    border: 2px solid var(--verdeLima);
     border-radius: 12px;
-    border: 2px solid var(--verdeLima); 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
-    transition: transform .3s ease;
+    padding: 10px;
+    background-color: var(--blanco);
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.mockups-grid img:hover {
-    transform: scale(1.03);
-} 
+.mockups-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform .3s ease;
+}
 
 /* -------------------
     CARD (BONOS / LISTAS)
@@ -884,24 +907,23 @@ h2 {
 .lista-beneficios {
     text-align: center;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
     max-width: 600px;
 }
 .lista-beneficios ul {
     list-style: none;
     padding: 10px;
-    border: 2px solid var(--verdeLima);
 }
 
 .lista-beneficios li {
-    margin: 12px 0;
-    font-size: 18px;
+    margin: 8px 0;
+    font-size: 16px;
     display: flex;
     align-items: center;
 }
 
 .lista-beneficios i {
-    margin-right: 10px;
+    margin-right: 5px;
     color: var(--verdeLima);
     font-size: 22px;
 }
@@ -1033,13 +1055,27 @@ h2 {
 
 .garantia p {
     max-width: 700px;
-    margin: 10px auto;
+    margin: 10px 10px;
     font-size: 0.95rem;
     line-height: 1.6;
 }
 /* -------------------
     RESPONSIVE
 -------------------- */
+/* --- DESKTOP: 1 mockup arriba + 3 abajo --- */
+@media (min-width: 768px) {
+
+    .mockups-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* PRIMER MOCKUP: ocupa toda la fila pero no tan ancho */
+    .mockups-grid .mockups:first-child {
+        grid-column: 1 / -1;  /* ocupa 3 columnas */
+        max-width: 300px;     /* 🔥 ajusta este valor */
+        margin: 0 auto;       /* centrar */
+    }
+}
 
 @media (max-width: 768px) {
     .bono-item {
@@ -1110,6 +1146,7 @@ h2 {
 .footer {
     padding: 50px 0;
     display: flex;
+
     justify-content: space-evenly;
     border-top: 2px solid var(--verdeLima);
     background-color: var(--fondo);
@@ -1225,7 +1262,7 @@ h2 {
 
 .video-section {
     text-align: center;
-    padding: 60px 20px;
+    padding: 30px 20px;
     background-color: var(--fondo);
 }
 
@@ -1294,7 +1331,7 @@ video,
 }
 
 .faq-section {
-    padding: 50px 20px;
+    padding: 20px 20px;
     background-color: var(--fondo);
     max-width: 900px;
     margin: 0 auto;
@@ -1377,7 +1414,7 @@ video,
 
 .oferta-especial {
     background-color: var(--fondo);
-    padding: 80px 20px;
+    padding: 30px 20px;
     text-align: center;
     color: var(--marronOscuro);
 }
@@ -1405,6 +1442,7 @@ video,
 /* === Precios === */
 .oferta-precios {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
@@ -1414,7 +1452,7 @@ video,
 .precio-original {
     text-decoration: line-through;
     color: var(--rojoVino);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .precio-oferta {
@@ -1555,11 +1593,11 @@ video,
 .linea-separador {
     width: 80%;
     /* No ocupa todo el ancho */
-    height: 6px;
+    height: 2.3px;
     /* Grosor */
     background-color: rgba(200, 30, 60, 0.5);
     /* Rojo suave */
-    margin: 40px auto;
+    margin: 20px auto;
     /* Separación vertical + centrado */
     border-radius: 50px;
 }
@@ -1633,7 +1671,7 @@ video,
     }
 
     .header {
-        padding: 100px 30px 50px 30px;
+        padding: 100px 30px 30px 30px;
         min-height: 0vh;
     }
 
@@ -1644,7 +1682,7 @@ video,
     }
 
     .header-img {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .header-img h3 {
@@ -1655,14 +1693,15 @@ video,
     .header-img p {
         line-height: 1.5;
         margin-bottom: 16px;
-        text-align: left;
+        text-align: justify;
+        letter-spacing: 0.1px;
     }
 
     .header-txt h1 {
         font-size: 50px;
     }
 
-    .header-txt h3 {
+    .header-txt p {
         text-align: justify;
         font-size: 16px;
     }
@@ -1671,9 +1710,9 @@ video,
         margin-right: 10px;
     }
 
-    .header-text {
+    .header-txt {
         order: -1;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
     }
 
     .descripcion {
@@ -1683,7 +1722,7 @@ video,
         align-items: center;
         /* centra horizontalmente el contenido */
         justify-content: center;
-        gap: 10px;
+        gap: 5px;
         margin-top: 5px;
     }
 
@@ -1692,7 +1731,7 @@ video,
     }
 
     .ofertas {
-        padding: 60px 30px;
+        padding: 5px 30px;
     }
 
     .ofertas-content {
@@ -1742,7 +1781,7 @@ video,
     }
 
     .promocion {
-        padding: 60px 20px;
+        padding: 20px 20px;
     }
 
     .promocion-content {
@@ -1763,7 +1802,8 @@ video,
     }
 
     .producto {
-        padding: 30px;
+        padding: 10px;
+        margin-top: 10px;
     }
 
     .producto-content {
@@ -1772,11 +1812,12 @@ video,
     }
 
     .blog {
-        padding: 30px;
+        padding: 10px;
     }
 
     .blog-content {
         grid-template-columns: 1fr;
+        gap: 20px
     }
 
     .testimonios-grid {
@@ -1799,15 +1840,24 @@ video,
 
     .lista-beneficios {
         text-align: left;
+        margin: 0 auto;
+        padding: 0 10px;
+        max-width: 100%;
     }
 
     .lista-beneficios ul {
         max-width: 100%;
+       
+    }
+
+    .lista-beneficios ul li {
+         font-size: 12px;
     }
 
     .container-compra img {
         max-width: 300px;
         margin: 0 auto 20px;
+        
     }
 
     .precio-total .precio {
@@ -1819,7 +1869,7 @@ video,
     }
 
     .faq-section {
-        padding: 60px 15px;
+        padding: 20px 15px;
     }
 
     .faq-question {
@@ -1901,5 +1951,25 @@ video,
     .flotante-action {
         padding: 0.6rem 1rem;
         font-size: 0.8rem;
+    }
+    .btn-1 {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+    .btn-2 {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+    .btn-3 {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+    .btn-4 {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+    .btn-comprar {
+        padding: 10px 20px;
+        font-size: 16px;
     }
 }
