@@ -12,7 +12,7 @@
     --threads: #000000;
     --verdeLima: #8fa243;
     --blancoCrema: #f7f8e7;
-    --fondo: #F2EBE5;
+    --fondo: #efdecd;
     --marron: #6d584a;
     --marronOscuro: #3f342c;
     --rojoVino: #b33a3a;
@@ -863,27 +863,24 @@ h2 {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 10px;
+    justify-items: center; /* clave */
 }
 
-/* Estilo general */
 .mockups-grid .mockups {
-    border: 2px solid var(--verdeLima);
-    border-radius: 12px;
-    padding: 10px;
-    background-color: var(--blanco);
     margin: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .mockups-grid img {
     width: 100%;
+    max-width: 250px;
     height: auto;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform .3s ease;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+   padding: auto;
 }
 
 /* -------------------
@@ -905,13 +902,13 @@ h2 {
 -------------------- */
 .lista-beneficios {
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
     padding: 0;
-    max-width: 600px;
+    max-width: 500px;
 }
 .lista-beneficios ul {
     list-style: none;
-    padding: 10px;
+    padding: 0;
 }
 
 .lista-beneficios li {
@@ -926,6 +923,9 @@ h2 {
     color: var(--verdeLima);
     font-size: 22px;
 }
+.lista-beneficios li span {
+    font-size: 14px;
+}
 
 /* -------------------
     BONOS
@@ -939,15 +939,15 @@ h2 {
 }
 
 .bono-item img {
-    width: 130px;
-    border-radius: 14px;
-    object-fit: cover;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 230px;
+    height: 230px;
+    object-fit: contain;
+    padding: auto;
 }
 
 .bono-texto h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
 }
 
@@ -989,7 +989,7 @@ h2 {
     color: var(--rojoVino);
     font-size: 20px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .acceso {
@@ -1066,13 +1066,14 @@ h2 {
 
     .mockups-grid {
         grid-template-columns: repeat(3, 1fr);
+        justify-items: center;  /* 🔥 CENTRA todo en cada columna */
     }
 
     /* PRIMER MOCKUP: ocupa toda la fila pero no tan ancho */
     .mockups-grid .mockups:first-child {
-        grid-column: 1 / -1;  /* ocupa 3 columnas */
-        max-width: 300px;     /* 🔥 ajusta este valor */
-        margin: 0 auto;       /* centrar */
+        grid-column: 1 / -1;   /* ocupa las 3 columnas */
+        max-width: 300px;      /* tamaño ajustado */
+        margin: 0 auto;        /* sigue centrado */
     }
 }
 
@@ -1084,7 +1085,9 @@ h2 {
     }
 
     .bono-item img {
-        width: 90%;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
     }
     .lista-beneficios ul {
         max-width: 100%;
@@ -1464,11 +1467,9 @@ video,
 .oferta-beneficios {
     list-style: none;
     padding: 0;
-    margin: 30px 0;
+    margin: 0 auto 30px auto;
     text-align: left;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 300px;
 }
 
 .oferta-beneficios li {
@@ -1476,6 +1477,7 @@ video,
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 10px;
 }
 
@@ -1520,6 +1522,53 @@ video,
 .logos-pago img:hover {
     filter: grayscale(0%);
     transform: scale(1.05);
+}
+
+.contador-oferta {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contador-box {
+    background: var(--blancoCrema); /* color suave */
+    border: 2px solid var(--verdeLima);
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 380px;
+    text-align: center;
+}
+
+.contador-texto {
+    font-size: 1rem;
+    color: #8a5f3a;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.contador-valores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.contador-valores .item span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #c7935a; /* similar al que trae tu imagen */
+}
+
+.contador-valores .item p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #8a5f3a;
+    font-weight: 500;
+}
+
+.contador-footer {
+    font-size: 0.95rem;
+    color: #8a5f3a;
 }
 
 /* Hero Section */
@@ -1838,14 +1887,13 @@ video,
 
     .lista-beneficios {
         text-align: left;
-        margin: 0 auto;
-        padding: 0 10px;
+        margin: 0 auto 20px auto;
+        padding: 0;
         max-width: 100%;
     }
 
     .lista-beneficios ul {
         max-width: 100%;
-       
     }
 
     .lista-beneficios ul li {
@@ -1853,7 +1901,7 @@ video,
     }
 
     .container-compra img {
-        max-width: 300px;
+        max-width: 200px;
         margin: 0 auto 20px;
         
     }
@@ -1880,14 +1928,6 @@ video,
 
     .precio-oferta {
         font-size: 2.3rem;
-    }
-
-    .oferta-beneficios {
-        text-align: center;
-    }
-
-    .oferta-beneficios li {
-        justify-content: center;
     }
 
     .logos-pago img {

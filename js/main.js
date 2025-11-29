@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const video = document.getElementById(btn.dataset.video);
 
       if (video.paused) {
-        // Pausar todos los demás videos
         document.querySelectorAll("video").forEach((v) => {
           v.pause();
           const iconBtn = document.querySelector(`[data-video="${v.id}"]`);
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        // Reproducir el video actual
         video.play();
         btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
         btn.style.opacity = "0.7";
@@ -33,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Cuando termina un video, vuelve el ícono a "play"
   document.querySelectorAll("video").forEach((video) => {
     video.addEventListener("ended", () => {
       const btn = document.querySelector(`[data-video="${video.id}"]`);
@@ -55,12 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const questionBtn = item.querySelector(".faq-question");
 
     questionBtn.addEventListener("click", () => {
-      // Cerrar los demás
       faqItems.forEach((other) => {
         if (other !== item) other.classList.remove("active");
       });
 
-      // Alternar el actual
       item.classList.toggle("active");
 
       const answer = item.querySelector(".faq-answer");
@@ -84,23 +79,55 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     const posicionActual = window.scrollY;
 
-    // Mostrar si está arriba del todo
     if (posicionActual === 0) {
       btnFlotante.classList.remove("oculto");
       ultimaPosicion = 0;
       return;
     }
 
-    // Bajando → ocultar
     if (posicionActual > ultimaPosicion) {
       btnFlotante.classList.add("oculto");
-    }
-    // Subiendo → mostrar
-    else {
+    } else {
       btnFlotante.classList.remove("oculto");
     }
 
     ultimaPosicion = posicionActual;
   });
+
+  
+
+  // ===============================
+  //      CONTADOR REGRESIVO
+  // ===============================
+
+  // Fecha objetivo (ejemplo: 3 días desde ahora)
+  const fechaObjetivo = new Date();
+  fechaObjetivo.setDate(fechaObjetivo.getDate() + 3);
+
+  function actualizarContador() {
+    const ahora = new Date().getTime();
+    const distancia = fechaObjetivo - ahora;
+
+    if (distancia <= 0) {
+      document.getElementById("dias").textContent = "00";
+      document.getElementById("horas").textContent = "00";
+      document.getElementById("minutos").textContent = "00";
+      document.getElementById("segundos").textContent = "00";
+      return;
+    }
+
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+    document.getElementById("dias").textContent = dias.toString().padStart(2, "0");
+    document.getElementById("horas").textContent = horas.toString().padStart(2, "0");
+    document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
+    document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
+  }
+
+  actualizarContador();
+  setInterval(actualizarContador, 1000);
 
 });
