@@ -1671,52 +1671,46 @@ video,
     border-radius: 50px;
 }
 
-/* ===============================
-   BOTÓN FLOTANTE WHATSAPP
-   Desktop: Siempre visible
-   Mobile: Ícono → despliegue lateral
-================================ */
-
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: var(--negroClaro);
-    color: #fff;
-    width: 260px;
-    padding: 15px 18px;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    cursor: pointer;
-    transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
-    z-index: 9999;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    border-radius: 20px;
+    width: 220px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
-/* Título */
 .whatsapp-float h2 {
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
-    font-weight: 600;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+    color: var(--blanco);
 }
 
-/* Subtítulo */
 .whatsapp-float p {
-    margin: 0;
+    margin: 5px 0 15px;
     font-size: 14px;
-    color: #fff;
+    color: var(--blanco);
 }
 
-/* Bloque ícono + texto */
 .wsp-content {
+    background: #1fa855;
+    padding: 18px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
 }
 
 .wsp-content i {
@@ -1724,99 +1718,47 @@ video,
 }
 
 .wsp-text {
-    font-size: 16px;
-    font-weight: 600;
     line-height: 1.1;
-    
+    text-align: left;
 }
 
-/* Ícono inferior */
 .wsp-icon {
-    width: 48px;
-    position: absolute;
-    bottom: -5px;
-    right: -5px;
+    width: 70px;
+    display: block;
+    margin: 0 auto;
 }
-
-/* Botón de cerrar */
-.close-wsp {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: #000;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0.8;
-    z-index: 10;
-}
-
-/* ===============================
-   MOBILE (MODO COMPACTO)
-================================ */
-
-@media (max-width: 768px) {
-
-    /* Caja inicial: solo ícono visible */
-    .whatsapp-float.mobile-closed {
-        width: 58px !important;
-        height: 58px;
-        padding: 0;
-        /* border-radius: 50%; */
-        overflow: hidden;
-        /* background: var(--negroClaro); */
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        opacity: 1;
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 15px;
+        padding: 16px;
     }
 
-    /* Ocultar contenido cuando está cerrada */
-    .whatsapp-float.mobile-closed h2,
-    .whatsapp-float.mobile-closed p,
-    .whatsapp-float.mobile-closed .wsp-content,
-    .whatsapp-float.mobile-closed .close-wsp {
-        display: none !important;
+    .whatsapp-float h2 {
+        font-size: 14px;
     }
 
-    /* Ícono grande en modo cerrado */
-    .whatsapp-float.mobile-closed .wsp-icon {
-        position: static;
-        width: 58px;
-        height: 58px;
+    .whatsapp-float p {
+        font-size: 12px;
     }
 
-    /* Caja abierta: despliegue lateral */
-    .whatsapp-float.mobile-open {
-        width: 260px !important;
-        height: auto;
-        padding: 15px 18px;
-        border-radius: 18px;
-        background: var(--negroClaro);
-        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+    .wsp-content {
+        flex-direction: row;
+        font-size: 14px;
+        padding: 5px;
+        gap: 10px;
     }
 
-    /* Mostrar contenido al abrir */
-    .whatsapp-float.mobile-open h2,
-    .whatsapp-float.mobile-open p,
-    .whatsapp-float.mobile-open .wsp-content,
-    .whatsapp-float.mobile-open .close-wsp {
-        display: block !important;
+    .wsp-content i {
+        font-size: 14px;
     }
 
-    /* Ícono vuelve a su posición normal */
-    .whatsapp-float.mobile-open .wsp-icon {
-        position: absolute;
-        bottom: -5px;
-        right: -5px;
-        width: 48px;
+    .wsp-icon {
+        width: 50px;
     }
 }
-
-
 
 /* 🔹 Responsivo: en móvil los videos se apilan */
 @media (max-width: 900px) {
