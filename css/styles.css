@@ -12,12 +12,12 @@
     --threads: #000000;
     --verdeLima: #8fa243;
     --blancoCrema: #f7f8e7;
-    --fondo: #efdecd;
+    --fondo: #FDFBF7;
     --marron: #6d584a;
     --marronOscuro: #3f342c;
     --rojoVino: #b33a3a;
     --naranjaApagado: #988780;
-    --negroClaro: #333;
+    --negroClaro: #333333c9;
     --grisClaro: rgba(219, 219, 219, 0.664);
     --gris: gray;
 }
@@ -200,7 +200,7 @@ img {
     font-weight: 400;
     line-height: 1.6;
     font-size: 16px;
-    
+
 }
 
 .header-img p span {
@@ -329,9 +329,11 @@ h2 {
 .producto h2 span {
     color: var(--verdeLima);
 }
+
 .producto {
     margin-top: 10px;
 }
+
 .producto-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -819,17 +821,21 @@ h2 {
     margin: 0 auto;
     text-align: center;
 }
+
 .titulo-con-icono {
     display: flex;
     align-items: center;
-    gap: 12px; /* espacio entre imagen y texto */
-    justify-content: center; /* opcional: centrar en pantalla */
+    gap: 12px;
+    /* espacio entre imagen y texto */
+    justify-content: center;
+    /* opcional: centrar en pantalla */
     text-align: left;
     margin: 15px;
 }
 
 .titulo-con-icono img {
-    width: 30px;  /* ajusta tamaño */
+    width: 30px;
+    /* ajusta tamaño */
     height: auto;
 }
 
@@ -863,7 +869,8 @@ h2 {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 10px;
-    justify-items: center; /* clave */
+    justify-items: center;
+    /* clave */
 }
 
 .mockups-grid .mockups {
@@ -880,7 +887,7 @@ h2 {
     object-fit: contain;
     display: block;
     margin: 0 auto;
-   padding: auto;
+    padding: auto;
 }
 
 /* -------------------
@@ -888,9 +895,9 @@ h2 {
 -------------------- */
 
 .card {
-    background: var(--blanco); 
+    background: var(--blanco);
     padding: 20px;
-    border-radius: 14px; 
+    border-radius: 14px;
     margin: 20px 20px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
     border: 2px solid var(--verdeLima);
@@ -906,6 +913,7 @@ h2 {
     padding: 0;
     max-width: 500px;
 }
+
 .lista-beneficios ul {
     list-style: none;
     padding: 0;
@@ -923,6 +931,7 @@ h2 {
     color: var(--verdeLima);
     font-size: 22px;
 }
+
 .lista-beneficios li span {
     font-size: 14px;
 }
@@ -1058,6 +1067,7 @@ h2 {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
 /* -------------------
     RESPONSIVE
 -------------------- */
@@ -1066,14 +1076,18 @@ h2 {
 
     .mockups-grid {
         grid-template-columns: repeat(3, 1fr);
-        justify-items: center;  /* 🔥 CENTRA todo en cada columna */
+        justify-items: center;
+        /* 🔥 CENTRA todo en cada columna */
     }
 
     /* PRIMER MOCKUP: ocupa toda la fila pero no tan ancho */
     .mockups-grid .mockups:first-child {
-        grid-column: 1 / -1;   /* ocupa las 3 columnas */
-        max-width: 300px;      /* tamaño ajustado */
-        margin: 0 auto;        /* sigue centrado */
+        grid-column: 1 / -1;
+        /* ocupa las 3 columnas */
+        max-width: 300px;
+        /* tamaño ajustado */
+        margin: 0 auto;
+        /* sigue centrado */
     }
 }
 
@@ -1089,17 +1103,21 @@ h2 {
         max-width: 300px;
         height: auto;
     }
+
     .lista-beneficios ul {
         max-width: 100%;
         margin: 10px;
     }
+
     .lista-beneficios li {
         font-size: 14px;
     }
+
     .lista-beneficios i {
         font-size: 16px;
     }
-    .tachado{
+
+    .tachado {
         font-size: 16px;
     }
 }
@@ -1167,12 +1185,14 @@ h2 {
     color: var(--negro);
     transition: 0.3s;
 }
+
 .footer-mobile {
     align-items: center;
     text-align: center;
     padding: 20px;
     background-color: var(--fondo);
 }
+
 /* Colores oficiales */
 .instagram i {
     color: var(--instagram);
@@ -1531,7 +1551,8 @@ video,
 }
 
 .contador-box {
-    background: var(--blancoCrema); /* color suave */
+    background: var(--blancoCrema);
+    /* color suave */
     border: 2px solid var(--verdeLima);
     border-radius: 20px;
     padding: 25px;
@@ -1556,7 +1577,8 @@ video,
 .contador-valores .item span {
     font-size: 2.2rem;
     font-weight: bold;
-    color: #c7935a; /* similar al que trae tu imagen */
+    color: #c7935a;
+    /* similar al que trae tu imagen */
 }
 
 .contador-valores .item p {
@@ -1649,28 +1671,152 @@ video,
     border-radius: 50px;
 }
 
+/* ===============================
+   BOTÓN FLOTANTE WHATSAPP
+   Desktop: Siempre visible
+   Mobile: Ícono → despliegue lateral
+================================ */
+
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25D366; /* verde whatsapp */
+    background: var(--negroClaro);
     color: #fff;
-    width: 60px;
-    height: 60px;
+    width: 260px;
+    padding: 15px 18px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
+    z-index: 9999;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Título */
+.whatsapp-float h2 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Subtítulo */
+.whatsapp-float p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Bloque ícono + texto */
+.wsp-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wsp-content i {
+    font-size: 18px;
+}
+
+.wsp-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    
+}
+
+/* Ícono inferior */
+.wsp-icon {
+    width: 48px;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+}
+
+/* Botón de cerrar */
+.close-wsp {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #000;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    z-index: 999;
-    transition: transform .3s ease, box-shadow .3s ease;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 10;
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+/* ===============================
+   MOBILE (MODO COMPACTO)
+================================ */
+
+@media (max-width: 768px) {
+
+    /* Caja inicial: solo ícono visible */
+    .whatsapp-float.mobile-closed {
+        width: 58px !important;
+        height: 58px;
+        padding: 0;
+        /* border-radius: 50%; */
+        overflow: hidden;
+        /* background: var(--negroClaro); */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        opacity: 1;
+    }
+
+    /* Ocultar contenido cuando está cerrada */
+    .whatsapp-float.mobile-closed h2,
+    .whatsapp-float.mobile-closed p,
+    .whatsapp-float.mobile-closed .wsp-content,
+    .whatsapp-float.mobile-closed .close-wsp {
+        display: none !important;
+    }
+
+    /* Ícono grande en modo cerrado */
+    .whatsapp-float.mobile-closed .wsp-icon {
+        position: static;
+        width: 58px;
+        height: 58px;
+    }
+
+    /* Caja abierta: despliegue lateral */
+    .whatsapp-float.mobile-open {
+        width: 260px !important;
+        height: auto;
+        padding: 15px 18px;
+        border-radius: 18px;
+        background: var(--negroClaro);
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Mostrar contenido al abrir */
+    .whatsapp-float.mobile-open h2,
+    .whatsapp-float.mobile-open p,
+    .whatsapp-float.mobile-open .wsp-content,
+    .whatsapp-float.mobile-open .close-wsp {
+        display: block !important;
+    }
+
+    /* Ícono vuelve a su posición normal */
+    .whatsapp-float.mobile-open .wsp-icon {
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+        width: 48px;
+    }
 }
+
+
 
 /* 🔹 Responsivo: en móvil los videos se apilan */
 @media (max-width: 900px) {
@@ -1897,13 +2043,13 @@ video,
     }
 
     .lista-beneficios ul li {
-         font-size: 12px;
+        font-size: 12px;
     }
 
     .container-compra img {
         max-width: 200px;
         margin: 0 auto 20px;
-        
+
     }
 
     .precio-total .precio {
@@ -1994,22 +2140,27 @@ video,
         padding: 0.6rem 1rem;
         font-size: 0.8rem;
     }
+
     .btn-1 {
         padding: 8px 20px;
         font-size: 16px;
     }
+
     .btn-2 {
         padding: 8px 20px;
         font-size: 16px;
     }
+
     .btn-3 {
         padding: 8px 20px;
         font-size: 16px;
     }
+
     .btn-4 {
         padding: 8px 20px;
         font-size: 16px;
     }
+
     .btn-comprar {
         padding: 10px 20px;
         font-size: 16px;

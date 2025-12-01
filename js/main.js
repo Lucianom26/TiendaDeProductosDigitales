@@ -1,3 +1,5 @@
+// Script original + integración del despliegue lateral del botón flotante
+
 document.addEventListener("DOMContentLoaded", () => {
 
   // ===============================
@@ -42,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-
   // ===============================
   //  SECCIÓN FAQ INTERACTIVA
   // ===============================
@@ -69,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-
   // ===============================
   //  BOTÓN FLOTANTE: OCULTAR AL BAJAR, MOSTRAR AL SUBIR
   // ===============================
@@ -94,13 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ultimaPosicion = posicionActual;
   });
 
-  
 
   // ===============================
   //      CONTADOR REGRESIVO
   // ===============================
 
-  // Fecha objetivo (ejemplo: 3 días desde ahora)
   const fechaObjetivo = new Date();
   fechaObjetivo.setDate(fechaObjetivo.getDate() + 3);
 
@@ -129,5 +127,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   actualizarContador();
   setInterval(actualizarContador, 1000);
+
+
+  // ===============================
+  // WHATSAPP FLOTANTE: DESPLIEGUE LATERAL + CERRAR
+  // ===============================
+
+  const wspBox = document.querySelector('.whatsapp-float');
+
+  if (wspBox) {
+    const closeBtn = document.createElement('div');
+    closeBtn.classList.add('close-wsp');
+    closeBtn.innerHTML = '✕';
+    wspBox.appendChild(closeBtn);
+
+    // Inicia cerrado en mobile
+    wspBox.classList.add('mobile-closed');
+
+    // Abrir al tocar
+    wspBox.addEventListener('click', () => {
+      if (wspBox.classList.contains('mobile-closed')) {
+        wspBox.classList.remove('mobile-closed');
+        wspBox.classList.add('mobile-open');
+      }
+    });
+
+    // Cerrar con el botón
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      wspBox.classList.remove('mobile-open');
+      wspBox.classList.add('mobile-closed');
+    });
+  }
 
 });
