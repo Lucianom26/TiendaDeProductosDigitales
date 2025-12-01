@@ -129,8 +129,4 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(actualizarContador, 1000);
 
 
-  // ===============================
-  // WHATSAPP FLOTANTE: DESPLIEGUE LATERAL + CERRAR
-  // ===============================
-
 });

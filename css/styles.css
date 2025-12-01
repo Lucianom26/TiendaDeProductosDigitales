@@ -4,6 +4,7 @@
     --tiktok: linear-gradient(100deg, #010101, #69C9D0, #FFFFFF, #EE1D52);
     --verdeOlivia: #588157;
     --negro: #000000;
+    --negroOpacity: #00000050;
     --gmail: #D14836;
     --blanco: #ffffff;
     --instagram: #E4405F;
@@ -1671,95 +1672,93 @@ video,
     border-radius: 50px;
 }
 
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--negroClaro);
-    padding: 20px;
-    border-radius: 20px;
-    width: 220px;
-    color: white;
-    font-family: "Poppins", sans-serif;
+/* ============================
+   SECCIÓN WHATSAPP – ESTILO
+   ============================ */
+
+.whatsapp-content {
+    background: var(--negro);
+    color: #fff;
+    padding: 30px 20px;
+    margin: 0 auto;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-}
-
-.whatsapp-float h2 {
-    font-size: 18px;
-    margin: 0;
-    font-weight: 800;
-    font-family: "Poppins", sans-serif;
-    color: var(--blanco);
-}
-
-.whatsapp-float p {
-    margin: 5px 0 15px;
-    font-size: 14px;
-    color: var(--blanco);
-}
-
-.wsp-content {
-    background: #1fa855;
-    padding: 18px;
-    border-radius: 12px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-size: 16px;
+    flex-direction: column;
+    gap: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Títulos */
+.whatsapp-content h2 {
+    margin: 0;
+    font-size: 32px;
     font-weight: 700;
-    margin-bottom: 15px;
-    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+.whatsapp-content p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--blanco);
+}
+
+/* Ícono + texto */
+.wsp-content {
+    display: flex;
+    flex-direction: row;      /* 🔥 fila */
+    align-items: center;      /* centra verticalmente */
+    justify-content: center;  /* centra horizontalmente */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--verdeOlivia);
+    gap: 6px;
+    width: max-content;       /* ajusta el ancho al contenido */
+    margin: 0 auto;           /* 🔥 centra TODO el bloque */
 }
 
 .wsp-content i {
-    font-size: 18px;
+    font-size: 24px;
+    color: var(--blanco);
+    margin-right: 30px ;
 }
 
 .wsp-text {
+    font-size: 24px;
+    font-weight: bold;
     line-height: 1.1;
-    text-align: left;
+    text-transform: uppercase;
 }
 
+/* Imagen inferior */
 .wsp-icon {
-    width: 70px;
+    width: 180px;
     display: block;
     margin: 0 auto;
+    transition: transform 0.2s ease;
 }
-@media (max-width: 991px) {
-    .whatsapp-float {
-        width: 50%;
-        right: 30%; 
-        transform: translateX(50%);
-        bottom: 15px;
-        padding: 16px;
-    }
 
-    .whatsapp-float h2 {
-        font-size: 14px;
-        display: none;
-    }
+.wsp-icon:hover {
+    transform: scale(1.05);
+}
 
-    .whatsapp-float p {
-        font-size: 12px;
-        display: none;
-    }
+/* ====== RESPONSIVE ====== */
 
-    .wsp-content {
-        flex-direction: row;
-        font-size: 12px;
-        padding: 5px;
-        gap: 10px;
-        
-    }
-
-    .wsp-content i {
-        font-size: 14px;
+@media (max-width: 768px) {
+    .whatsapp-content {
+        padding: 25px 18px;
     }
 
     .wsp-icon {
-        width: 40px;
+        width: 120px;
+    }
+
+    .wsp-content i {
+        font-size: 24px;
+    }
+
+    .wsp-text {
+        font-size: 15px;
     }
 }
 
