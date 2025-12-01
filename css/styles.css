@@ -1727,10 +1727,10 @@ video,
     display: block;
     margin: 0 auto;
 }
-@media (max-width: 480px) {
+@media (max-width: 991px) {
     .whatsapp-float {
-        width: 90%;
-        right: 50%;
+        width: 50%;
+        right: 30%; 
         transform: translateX(50%);
         bottom: 15px;
         padding: 16px;
@@ -1738,17 +1738,20 @@ video,
 
     .whatsapp-float h2 {
         font-size: 14px;
+        display: none;
     }
 
     .whatsapp-float p {
         font-size: 12px;
+        display: none;
     }
 
     .wsp-content {
         flex-direction: row;
-        font-size: 14px;
+        font-size: 12px;
         padding: 5px;
         gap: 10px;
+        
     }
 
     .wsp-content i {
@@ -1756,7 +1759,7 @@ video,
     }
 
     .wsp-icon {
-        width: 50px;
+        width: 40px;
     }
 }
 
