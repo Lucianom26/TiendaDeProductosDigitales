@@ -133,31 +133,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // WHATSAPP FLOTANTE: DESPLIEGUE LATERAL + CERRAR
   // ===============================
 
-  const wspBox = document.querySelector('.whatsapp-float');
-
-  if (wspBox) {
-    const closeBtn = document.createElement('div');
-    closeBtn.classList.add('close-wsp');
-    closeBtn.innerHTML = '✕';
-    wspBox.appendChild(closeBtn);
-
-    // Inicia cerrado en mobile
-    wspBox.classList.add('mobile-closed');
-
-    // Abrir al tocar
-    wspBox.addEventListener('click', () => {
-      if (wspBox.classList.contains('mobile-closed')) {
-        wspBox.classList.remove('mobile-closed');
-        wspBox.classList.add('mobile-open');
-      }
-    });
-
-    // Cerrar con el botón
-    closeBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      wspBox.classList.remove('mobile-open');
-      wspBox.classList.add('mobile-closed');
-    });
-  }
-
 });
