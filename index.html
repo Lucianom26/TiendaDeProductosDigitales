@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Exploradores en la Fe | KIDS - Descubre la Biblia de una manera divertida y educativa.">
-    <title>Exploradores Kids Biblicos</title>
+    <title>Exploradores Kids Bíblicos</title>
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/BANNER-Celu_1.ico" type="image/x-icon">
+
+
+    <!-- Preload CSS -->
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="preload" href="/css/styles.css" as="style">
+
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" href="/img/BANNER-Celu_1.ico" type="image/x-icon">
-    <!--------------Preload----------------->
-    <link rel="preload" as="style" href="/css/normalize.css">
-    <link rel="preload" as="style" href="/css/styles.css">
-    <!--Imagenes-->
-    <link rel="preload" as="image" href="/img/BANNER-Celu.webp">
-    <link rel="preload" as="image" href="/img/Banner Compu (2560 x 967 px) (2).webp">
-    <!--------------Fin Preload----------------->
+
+
+    <!-- Font Awesome optimizado -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </noscript>
+
+
+    <!-- Preload imagen hero -->
+    <link rel="preload" as="image" href="/img/Banner%20Compu%20(2560%20x%20967%20px)%20(2).webp" fetchpriority="high">
 </head>
+
 <body>
     <header class="header">
         <div class="menu container">
@@ -51,10 +68,9 @@
             <div class="header-img">
                 <h2>PACK BÍBLICO CREATIVO</h2>
                 <picture>
-                    <!-- Imagen para celular -->
-                    <source srcset="/img/BANNER-Celu.webp" media="(max-width: 768px)">
-                    <!-- Imagen para desktop -->
-                    <img src="/img/Banner Compu (2560 x 967 px) (2).webp" alt="Banner principal">
+                    <source srcset="/img/BANNER-Celu.webp" media="(max-width:768px)">
+                    <img src="/img/Banner Compu (2560 x 967 px) (2).webp" alt="Banner principal" width="1200"
+                        height="450" fetchpriority="high">
                 </picture>
                 <p>+ 600 Recursos Bíblicos imprimibles, cuidadosamente diseñados para que niños y adolescentes (3 a 16
                     años) descubran la Palabra de Dios de una manera <span>divertida y llena de propósito fortaleciendo
@@ -84,7 +100,7 @@
         <h2 class="subtitulo">Si esto te suena, no estás sola...</h2>
         <div class="ofertas-content">
             <div class="oferta-1">
-                <img src="/img/niñoAburrido.webp" alt="Producto 1">
+                <img src="/img/niñoAburrido.webp" alt="Producto 1" loading="lazy" decoding="async">
                 <div class="producto-txt">
                     <p><i class="fa-solid fa-triangle-exclamation"></i>¿Tus hijos se aburren cuando intentas leerles la
                         Biblia, pero no puedes sacarlos de la pantalla?
@@ -92,7 +108,7 @@
                 </div>
             </div>
             <div class="oferta-1">
-                <img src="/img/MamaEnseñando.webp" alt="Producto 2">
+                <img src="/img/MamaEnseñando.webp" alt="Producto 2" loading="lazy" decoding="async">
                 <div class="producto-txt">
                     <p><i class="fa-solid fa-person-rays"></i>¿Has intentado devocionales, pero duran poco…y pierden el
                         interés?</p>
@@ -101,14 +117,14 @@
         </div>
         <div class="ofertas-content">
             <div class="oferta-1">
-                <img src="/img/papaMamaPreocupados.webp" alt="Producto 2">
+                <img src="/img/papaMamaPreocupados.webp" alt="Producto 2" loading="lazy" decoding="async">
                 <div class="producto-txt">
                     <p><i class="fa-solid fa-circle-exclamation"></i><span>No tienes tiempo para preparar actividades
                             'perfectas'… y está bien.</span></p>
                 </div>
             </div>
             <div class="oferta-1">
-                <img src="/img/MamaEnseñando2.jpg" alt="Producto 2">
+                <img src="/img/MamaEnseñando2.jpg" alt="Producto 2" loading="lazy" decoding="async">
                 <div class="producto-txt">
                     <p><i class="fa-regular fa-heart"></i> Sientes culpa por no lograr que la fe sea alegre y constante.
                     </p>
@@ -314,19 +330,20 @@
         <h2 class="video-title">Explora nuestros videos</h2>
         <div class="video-grid">
             <div class="video-container">
-                <video id="video1" src="/video/video-1.mp4" poster="/img/BANNER-Celu.webp"></video>
+                <video id="video1" src="/video/video-1.mp4" poster="/img/BANNER-Celu.webp" preload="none"
+                    playsinline></video>
                 <button class="play-btn" data-video="video1">
                     <i class="fa-solid fa-play"></i>
                 </button>
             </div>
             <div class="video-container">
-                <video id="video2" src="/video/video-2.mp4" poster="/img/BANNER-Celu.webp"></video>
+                <video id="video2" src="/video/video-2.mp4" poster="/img/BANNER-Celu.webp" preload="none" playsinline></video>
                 <button class="play-btn" data-video="video2">
                     <i class="fa-solid fa-play"></i>
                 </button>
             </div>
             <div class="video-container">
-                <video id="video3" src="/video/video-3.mp4" poster="/img/BANNER-Celu.webp"></video>
+                <video id="video3" src="/video/video-3.mp4" poster="/img/BANNER-Celu.webp" preload="none" playsinline></video>
                 <button class="play-btn" data-video="video3">
                     <i class="fa-solid fa-play"></i>
                 </button>
@@ -707,17 +724,17 @@
             <a href="#testimonios">¡Ver Testimonios!</a>
         </div>
     </section>
-    <section class="whatsapp-content">  
-            <h2>¿TIENES + PREGUNTAS?</h2>
-            <p><strong>Escríbenos</strong> por Whatsapp</p>
-            <div class="wsp-content">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span class="wsp-text">¡TENGO UNA<br>PREGUNTA!</span>
-            </div>
-            <a href="https://wa.me/5491144752834" target="_blank" aria-label="Contactar por WhatsApp"
-                rel="noopener noreferrer">
-                <img src="/img/mockups/whatsapp_logo_icon_259368.png" alt="WhatsApp" class="wsp-icon">
-            </a>
+    <section class="whatsapp-content">
+        <h2>¿TIENES + PREGUNTAS?</h2>
+        <p><strong>Escríbenos</strong> por Whatsapp</p>
+        <div class="wsp-content">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="wsp-text">¡TENGO UNA<br>PREGUNTA!</span>
+        </div>
+        <a href="https://wa.me/5491144752834" target="_blank" aria-label="Contactar por WhatsApp"
+            rel="noopener noreferrer">
+            <img src="/img/mockups/whatsapp_logo_icon_259368.png" alt="WhatsApp" class="wsp-icon">
+        </a>
     </section>
     <footer class="footer" id="contacto">
         <div class="redes-sociales">
@@ -758,6 +775,7 @@
             Descarga Inmediata
         </a>
     </div>
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" defer></script>
 </body>
+
 </html>
